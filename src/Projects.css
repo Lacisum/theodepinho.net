@@ -1,0 +1,8 @@
+#projects {
+    grid-area: projects;
+}
+
+.projects-grid {
+    grid-template-columns: repeat(auto-fit, 20rem);
+    gap: 2rem 1rem;
+}

@@ -1,0 +1,8 @@
+#technical-skills {
+    grid-area: technical-skills;
+}
+
+.tech-skills-grid {
+    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 1rem;
+}

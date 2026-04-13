@@ -1,0 +1,21 @@
+#id-card {
+    grid-area: id-card;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+#id-card p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#my-name {
+    font-size: 2em;
+}
+
+#portrait {
+    width: 10rem;
+    aspect-ratio: 1;
+}

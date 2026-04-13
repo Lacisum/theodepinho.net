@@ -1,0 +1,12 @@
+.project-card img {
+    width: 20rem;
+    height: 12rem;
+}
+
+.project-card figcaption {
+    padding: 0 1rem;
+}
+
+.project-card p {
+    font-size: 0.8em;
+}
