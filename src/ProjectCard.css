@@ -1,4 +1,5 @@
 .project-card {
+    box-shadow: var(--box-shadow);
     overflow: hidden;
 }
 
