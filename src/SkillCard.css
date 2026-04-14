@@ -6,4 +6,9 @@
 
 .skill-card img {
     height: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card figcaption {
+    line-height: 1;
 }

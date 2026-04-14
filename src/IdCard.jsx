@@ -4,8 +4,8 @@ const IdCard = () => {
   return (
     <section id="id-card">
       <p>
-        Bonjour, je suis <br />
-        <strong id="my-name">Théo de Pinho,</strong> <br />
+        Bonjour, je suis
+        <strong id="my-name">Théo de Pinho,</strong>
         étudiant en 2e année de master d'informatique.
       </p>
       <img
