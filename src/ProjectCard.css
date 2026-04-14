@@ -1,12 +1,16 @@
-.project-card img {
-    width: 20rem;
-    height: 12rem;
+.project-card {
+    overflow: hidden;
 }
 
-.project-card figcaption {
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.project-card .caption {
     padding: 0 1rem;
 }
 
-.project-card p {
+.project-card .caption p {
     font-size: 0.8em;
 }

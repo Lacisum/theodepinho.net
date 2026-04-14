@@ -3,6 +3,6 @@
 }
 
 .tech-skills-grid {
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, min(100%, 6rem));
     gap: 1rem;
 }
