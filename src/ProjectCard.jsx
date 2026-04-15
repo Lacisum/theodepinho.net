@@ -6,6 +6,7 @@ const ProjectCard = ({ imgSrc, imgAlt, projectTitle, projectDescription }) => {
       <img
         src={imgSrc}
         alt={imgAlt}
+        height="180"
       />
       <div className="caption">
         <h3>{projectTitle}</h3>

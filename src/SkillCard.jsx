@@ -6,6 +6,7 @@ const SkillCard = ({ imgSrc, imgAlt, caption }) => {
       <img
         src={imgSrc}
         alt={imgAlt}
+        height="48"
       />
       <div class="caption">{caption}</div>
     </div>
