@@ -1,0 +1,12 @@
+#root {
+    justify-content: center;
+}
+
+#page-not-found-block {
+    font-size: 1rem;
+}
+
+#page-not-found-sentence {
+    font-size: 1.4em;
+    font-weight: bold;
+}

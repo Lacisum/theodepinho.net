@@ -1,14 +1,10 @@
-import './SkillCard.css';
+import "./SkillCard.css";
 
 const SkillCard = ({ imgSrc, imgAlt, caption }) => {
   return (
     <div className="skill-card">
-      <img
-        src={imgSrc}
-        alt={imgAlt}
-        height="48"
-      />
-      <div class="caption">{caption}</div>
+      <img src={imgSrc} alt={imgAlt} height="48" />
+      <div className="caption">{caption}</div>
     </div>
   );
 };

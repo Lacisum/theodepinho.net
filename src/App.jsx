@@ -1,15 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import "./App.css";
-import IdCard from "./IdCard";
-import Projects from "./Projects";
-import TechnicalSkills from "./TechnicalSkills";
+import PageFound from "./PageFound";
+import PageNotFound from "./PageNotFound";
 
 function App() {
   return (
-    <main>
-      <IdCard />
-      <TechnicalSkills />
-      <Projects />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<PageFound />} />
+        <Route path="*" element={<PageNotFound />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
