@@ -1,4 +1,4 @@
-import SkillCard from "./SkillCard";
+import SkillCard from "./TechnicalSkills/SkillCard";
 import "./TechnicalSkills.css";
 
 const TechnicalSkills = () => {

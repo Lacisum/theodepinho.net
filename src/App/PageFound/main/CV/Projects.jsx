@@ -1,5 +1,5 @@
 import "./Projects.css";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./Projects/ProjectCard";
 
 const Projects = () => {
   return (
