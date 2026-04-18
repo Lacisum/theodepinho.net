@@ -4,8 +4,8 @@ import "./TechnicalSkills.css";
 const TechnicalSkills = () => {
   return (
     <section id="technicall-skills">
-      <h2>Mes compétences techniques</h2>
-      <div className="grid tech-skills-grid">
+      <h3>Mes compétences techniques</h3>
+      <div id="technical-skills-grid">
         <SkillCard
           imgSrc="logos/java-small.webp"
           alt="Java Logo"

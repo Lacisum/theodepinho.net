@@ -3,21 +3,17 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1em;
+    row-gap: 0;
+    column-gap: 3rem;
 }
 
-#id-card p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 1.3; /* Serves to adjust interline space */
-}
-
-#my-name {
-    font-size: 2em;
-}
-
-#portrait {
+#id-card > img {
     width: 10rem;
     aspect-ratio: 1;
+}
+
+#id-card > p {
+    display: flex;
+    align-items: center;
+    max-width: 20rem;
 }

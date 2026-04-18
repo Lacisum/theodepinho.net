@@ -1,8 +1,9 @@
 #content {
-    width: min(100%, 70rem);
-    margin: 0 auto;
+    margin: auto;
+    width: min(100%, 85rem);
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    gap: var(--main-grid-gap);
+    grid-template-columns: 12.5rem 1fr 12.5rem;
     grid-template-areas:
         "header header header"
         "aside-left main aside-right";
@@ -12,58 +13,52 @@ header {
     grid-area: header;
 }
 
+#aside-top {
+    grid-area: aside-top;
+    display: none;
+    border-top-left-radius: var(--main-grid-border-radius);
+    border-top-right-radius: var(--main-grid-border-radius);
+}
+
 #aside-left {
     grid-area: aside-left;
-    border-top-left-radius: var(--base-border-radius);
-    border-bottom-left-radius: var(--base-border-radius);
+    padding: var(--main-grid-border-radius);
+    border-top-left-radius: var(--main-grid-border-radius);
+    border-bottom-left-radius: var(--main-grid-border-radius);
 }
 
 #aside-right {
     grid-area: aside-right;
-    border-top-right-radius: var(--base-border-radius);
-    border-bottom-right-radius: var(--base-border-radius);
+    padding: var(--main-grid-border-radius);
+    border-top-right-radius: var(--main-grid-border-radius);
+    border-bottom-right-radius: var(--main-grid-border-radius);
 }
 
 main {
     grid-area: main;
-    padding: 1rem;
-    /* margin: calc(1rem + 2dvw) 0; */
+    padding: var(--main-grid-border-radius);
 }
 
-@media (max-width: 725px) {
-    main {
-        display: flex;
-        flex-direction: column;
+#aside-left, #aside-right, main {
+    background-color: var(--section-background-color);
+}
+
+@media (max-width: 1024px) {
+    #content {
+        grid-template-columns: initial;
+        grid-template-areas:
+            "header"
+            "aside-top"
+            "main";
     }
-}
-
-.base-background-color {
-    background-color: var(--base-background-color);
-}
-
-
-
-
-
-
-
-section {
-    padding: 1rem;
-    border-radius: 3rem;
-    box-shadow: var(--box-shadow);
-    background-color: var(--base-background-color);
-}
-
-
-
-
-.grid {
-    display: grid;
-    justify-content: center;
-}
-
-.grid > * {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: var(--base-border-radius);
-    padding: 0rem;
+    #aside-top {
+        display: block;
+    }
+    #aside-left, #aside-right {
+        display: none;
+    }
+    main {
+        border-bottom-left-radius: var(--main-grid-border-radius);
+        border-bottom-right-radius: var(--main-grid-border-radius);
+    }
 }

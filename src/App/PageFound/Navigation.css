@@ -1,0 +1,42 @@
+.nav-list {
+    list-style-type: square;
+    padding-left: 1rem;
+}
+
+.nav-link {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+    color: currentColor;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: oklch(from var(--primary-color) calc(l - 0.05) c h);
+}
+
+.nav-link:active {
+    background-color: oklch(from var(--primary-color) calc(l - 0.1) c h);
+}
+
+@media (max-width: 1024px) {
+    .nav-list {
+        display: flex;
+        list-style: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        gap: var(--main-grid-gap);
+        text-align: center;
+    }
+
+    .nav-item {
+        flex: 1;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 1rem 0 1rem 0;
+        background-color: var(--section-background-color);
+    }
+}

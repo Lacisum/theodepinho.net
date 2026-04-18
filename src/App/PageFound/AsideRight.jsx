@@ -1,11 +1,5 @@
-import "./AsideRight.css";
-
 const AsideRight = () => {
-  return (
-    <aside id="aside-right" className="base-background-color">
-      À remplir
-    </aside>
-  );
+  return <aside id="aside-right"></aside>;
 };
 
 export default AsideRight;

@@ -3,6 +3,8 @@
 }
 
 .projects-grid {
-    grid-template-columns: repeat(auto-fit, min(100%, 20rem));
-    gap: 2rem 1rem;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: var(--section-padding);
 }

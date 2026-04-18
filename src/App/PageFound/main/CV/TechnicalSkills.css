@@ -2,7 +2,9 @@
     grid-area: technical-skills;
 }
 
-.tech-skills-grid {
-    grid-template-columns: repeat(auto-fit, min(100%, 6rem));
+#technical-skills-grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, min(100%, 5rem));
     gap: 1rem;
 }

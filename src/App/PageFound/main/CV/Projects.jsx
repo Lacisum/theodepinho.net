@@ -4,8 +4,8 @@ import ProjectCard from "./Projects/ProjectCard";
 const Projects = () => {
   return (
     <section id="projects">
-      <h2>Exemples de projets réalisés</h2>
-      <div className="grid projects-grid">
+      <h3>Exemples de projets réalisés</h3>
+      <div className="projects-grid">
         <ProjectCard
           imgSrc="projects/cohortis.webp"
           imgAlt="Screenshot of the Cohortis web application"
