@@ -4,7 +4,7 @@ import "./TechnicalSkills.css";
 const TechnicalSkills = () => {
   return (
     <section id="technicall-skills">
-      <h3>Mes compétences techniques</h3>
+      <h3>Compétences techniques</h3>
       <div id="technical-skills-grid">
         <SkillCard
           imgSrc="logos/java-small.webp"

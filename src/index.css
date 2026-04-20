@@ -36,6 +36,10 @@ body {
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
 }
 
+code {
+    font-family: monospace;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
 }
@@ -46,6 +50,10 @@ h1, h2 {
 
 h2, h3 {
     margin-top: 0;
+}
+
+h1 {
+    letter-spacing: 0.2rem;
 }
 
 section {
