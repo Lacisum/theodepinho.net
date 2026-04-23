@@ -1,10 +1,7 @@
-#projects {
-    grid-area: projects;
-}
-
 .projects-grid {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     gap: var(--section-padding);
 }
+

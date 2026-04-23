@@ -2,7 +2,7 @@ import "./CV-list.css";
 
 const ProfessionalExperiences = () => {
   return (
-    <section id="professional-experiences">
+    <section>
       <h3>Expériences professionnelles</h3>
       <ol id="jobs-list" className="cv-list">
         <li className="job">

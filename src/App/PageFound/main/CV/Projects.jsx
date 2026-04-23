@@ -3,7 +3,7 @@ import ProjectCard from "./Projects/ProjectCard";
 
 const Projects = () => {
   return (
-    <section id="projects">
+    <section>
       <h3>Exemples de projets réalisés</h3>
       <div className="projects-grid">
         <ProjectCard

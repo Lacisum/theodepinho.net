@@ -3,20 +3,21 @@
     width: min(100%, 85rem);
     display: grid;
     gap: var(--main-grid-gap);
+
+    header {
+        grid-area: header;
+    }
+    
+    #aside-left, #aside-right, main {
+        background-color: var(--section-background-color);
+    }
+    
+    main {
+        grid-area: main;
+        padding: var(--main-grid-border-radius);
+    }
 }
 
-header {
-    grid-area: header;
-}
-
-#aside-left, #aside-right, main {
-    background-color: var(--section-background-color);
-}
-
-main {
-    grid-area: main;
-    padding: var(--main-grid-border-radius);
-}
 
 
 
@@ -28,25 +29,26 @@ main {
         grid-template-areas:
             "header header header"
             "aside-left main aside-right";
-    }
 
-    #aside-top {
-        display: none;
-    }
-
-    #aside-left {
-        grid-area: aside-left;
-        padding: var(--main-grid-border-radius);
-        border-top-left-radius: var(--main-grid-border-radius);
-        border-bottom-left-radius: var(--main-grid-border-radius);
-    }
+        #aside-top {
+            display: none;
+        }
     
-    #aside-right {
-        grid-area: aside-right;
-        padding: var(--main-grid-border-radius);
-        border-top-right-radius: var(--main-grid-border-radius);
-        border-bottom-right-radius: var(--main-grid-border-radius);
+        #aside-left {
+            grid-area: aside-left;
+            padding: var(--main-grid-border-radius);
+            border-top-left-radius: var(--main-grid-border-radius);
+            border-bottom-left-radius: var(--main-grid-border-radius);
+        }
+        
+        #aside-right {
+            grid-area: aside-right;
+            padding: var(--main-grid-border-radius);
+            border-top-right-radius: var(--main-grid-border-radius);
+            border-bottom-right-radius: var(--main-grid-border-radius);
+        }
     }
+
 }
 
 
@@ -60,20 +62,20 @@ main {
             "header"
             "aside-top"
             "main";
-    }
 
-    #aside-top {
-        grid-area: aside-top;
-        border-top-left-radius: var(--main-grid-border-radius);
-        border-top-right-radius: var(--main-grid-border-radius);
-    }
-
-    #aside-left, #aside-right {
-        display: none;
-    }
-
-    main {
-        border-bottom-left-radius: var(--main-grid-border-radius);
-        border-bottom-right-radius: var(--main-grid-border-radius);
+        #aside-top {
+            grid-area: aside-top;
+            border-top-left-radius: var(--main-grid-border-radius);
+            border-top-right-radius: var(--main-grid-border-radius);
+        }
+    
+        #aside-left, #aside-right {
+            display: none;
+        }
+    
+        main {
+            border-bottom-left-radius: var(--main-grid-border-radius);
+            border-bottom-right-radius: var(--main-grid-border-radius);
+        }
     }
 }

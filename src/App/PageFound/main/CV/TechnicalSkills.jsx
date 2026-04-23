@@ -3,7 +3,7 @@ import "./TechnicalSkills.css";
 
 const TechnicalSkills = () => {
   return (
-    <section id="technicall-skills">
+    <section>
       <h3>Compétences techniques</h3>
       <div id="technical-skills-grid">
         <SkillCard

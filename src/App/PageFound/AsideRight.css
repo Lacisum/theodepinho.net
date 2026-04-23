@@ -4,9 +4,10 @@
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
+
+        & > img {
+            width: var(--buttons-88-31-width);
+        }
     }
 
-    #aside-right > img {
-        width: var(--buttons-88-31-width);
-    }
 }

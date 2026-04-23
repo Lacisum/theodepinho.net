@@ -1,23 +1,23 @@
 .project-card {
     overflow: hidden;
     border: 1px dotted currentColor;
-}
 
-.project-card img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
+    img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
 
-.project-card .caption {
-    padding: 0 1rem;
-}
+    .caption {
+        padding: 0 1rem;
 
-.project-card .caption .title {
-    margin-top: 1rem;
-    text-align: center;
-}
+        .title {
+            margin-top: 1rem;
+            text-align: center;
+        }
 
-.project-card .caption .description {
-    font-size: var(--font-small);
+        .description {
+            font-size: var(--font-small);
+        }
+    }
 }

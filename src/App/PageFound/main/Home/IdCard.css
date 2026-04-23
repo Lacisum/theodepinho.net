@@ -5,16 +5,17 @@
     justify-content: center;
     row-gap: 0;
     column-gap: 3rem;
+
+    & > img {
+        height: 181px;
+    }
+    
+    & > p {
+        display: flex;
+        align-items: center;
+        max-width: 20rem;
+        text-align: center;
+        text-wrap: balance;
+    }
 }
 
-#id-card > img {
-    height: 181px;
-}
-
-#id-card > p {
-    display: flex;
-    align-items: center;
-    max-width: 20rem;
-    text-align: center;
-    text-wrap: balance;
-}

@@ -2,7 +2,7 @@ import "./CV-list.css";
 
 const Education = () => {
   return (
-    <section id="education">
+    <section>
       <h3>Formation</h3>
       <ol className="cv-list">
         <li>

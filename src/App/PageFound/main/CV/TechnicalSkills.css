@@ -1,10 +1,7 @@
-#technical-skills {
-    grid-area: technical-skills;
-}
-
 #technical-skills-grid {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, min(100%, 5rem));
     gap: 1rem;
 }
+

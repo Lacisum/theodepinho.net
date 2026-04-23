@@ -3,13 +3,13 @@
     flex-direction: column;
     gap: 0.5rem;
     list-style: none;
-}
 
-.cv-list > li > .title {
-    margin: 0;
-}
-
-.cv-list > li > .details {
-    font-size: var(--font-small);
-    color: #666666;
+    & > li > .title {
+        margin: 0;
+    }
+    
+    & > li > .details {
+        font-size: var(--font-small);
+        color: #666666;
+    }
 }
