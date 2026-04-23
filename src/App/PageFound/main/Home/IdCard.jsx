@@ -6,6 +6,7 @@ const IdCard = () => {
       <img
         src="decoration/welcome.gif"
         alt="A computer screen that displays 'Welcome to my website', surrounded by cats playing."
+        width="193"
         height="181"
       />
       <p>
