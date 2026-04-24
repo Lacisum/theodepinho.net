@@ -3,11 +3,12 @@
 :root {
     --primary-color: lightskyblue;
     --secondary-color: wheat;
-    --main-grid-border-radius: calc(1rem + 1dvw);
+    --main-grid-border-radius: max(0.8rem, 2dvw);
     --main-grid-gap: 0.25rem;
     --section-padding: 1rem;
     --section-background-color: rgba(255, 255, 255, 0.3);
-    --font-small: 0.8rem;
+    --font-normal: clamp(0.8rem, 3dvw + 0.1rem, 1rem);
+    --font-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
     --buttons-88-31-width: 88px;
 }
 
@@ -18,11 +19,11 @@
 
 body {
     margin: 0;
-    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color)) no-repeat;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
 }
 
 #root {
-    padding: 3rem 0;
+    padding: clamp(1rem, 2dvw + 1rem, 3rem) 0;
     min-height: 100dvh;
     position: relative;
 }
@@ -35,6 +36,10 @@ body {
 * {
     box-sizing: border-box;
     font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+}
+
+:not(html) {
+    font-size: var(--font-normal);
 }
 
 code {
@@ -51,6 +56,15 @@ h1, h2 {
 
 h1 {
     letter-spacing: 0.2rem;
+    font-size: clamp(1rem, 5dvw + 0.3rem, 2rem);
+}
+
+h2 {
+    font-size: clamp(0.95rem, 4dvw + 0.2rem, 1.5rem);
+}
+
+h3 {
+    font-size: clamp(0.9rem, 3.5dvw + 0.2rem, 1.17rem);
 }
 
 section {
@@ -59,4 +73,8 @@ section {
     & > h3 {
         margin-top: 0 !important;
     }
+}
+
+ol {
+    padding-left: clamp(20px, 3dvw, 40px);
 }

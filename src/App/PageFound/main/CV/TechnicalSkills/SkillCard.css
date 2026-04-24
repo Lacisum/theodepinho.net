@@ -3,7 +3,7 @@
 
     img {
         max-width: 100%;
-        max-height: 2.5rem;
+        height: clamp(2rem, 2rem + 1dvw, 2.5rem);
         margin-bottom: 0.5rem;
     }
     

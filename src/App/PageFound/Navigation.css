@@ -36,7 +36,7 @@
 
             .nav-link {
                 width: 100%;
-                padding: 1rem 0 1rem 0;
+                padding: 1em 0 1em 0;
                 background-color: var(--section-background-color);
             }
         }

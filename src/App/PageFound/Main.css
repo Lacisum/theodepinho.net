@@ -1,5 +1,5 @@
 main section {
-    margin: 2rem 0;
+    margin: var(--main-grid-border-radius) 0;
 }
 
 main > *:first-child {
