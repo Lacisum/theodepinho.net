@@ -28,6 +28,12 @@ const AsideRight = () => {
         height="31"
       />
       <img
+        src="decoration/css-is-awesome.gif"
+        alt="Le texte 'CSS IS AWESOME' inscrit dans un rectangle aux bords noirs, sur fond blanc. Le mot 'AWESOME' dépasse du rectangle sur la droite."
+        width="88"
+        height="31"
+      />
+      <img
         src="decoration/got-html5.gif"
         alt="Le logo de HTML5 accompanié du texte 'GOT HTML5?'."
         width="88"
