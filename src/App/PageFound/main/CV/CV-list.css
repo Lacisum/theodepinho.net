@@ -9,7 +9,7 @@
     }
     
     & > li > .details {
-        font-size: var(--font-small);
-        color: #666666;
+        font-size: var(--font-size-small);
+        color: #ccc;
     }
 }

@@ -1,6 +1,8 @@
 .nav-list {
-    list-style-type: square;
-    padding-left: 1rem;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    color: black;
  
     .nav-link {
         display: inline-block;
@@ -8,13 +10,16 @@
         padding: 0.5rem 0 0.5rem 0;
         color: currentColor;
         text-decoration: none;
-    
+        background-color: var(--dark-gray);
+        border: 0.3rem outset var(--light-gray);
+
         &:hover {
-            background-color: oklch(from var(--primary-color) calc(l - 0.05) c h);
+            border-style: inset;
         }
         
         &:active {
-            background-color: oklch(from var(--primary-color) calc(l - 0.1) c h);
+            /* Darken the color */
+            background-color: oklch(from var(--dark-gray) calc(l - 0.05) c h);
         }
     }
 }
@@ -24,11 +29,9 @@
 @media (max-width: 1024px) {
     .nav-list {
         display: flex;
-        list-style: none;
         margin-top: 0;
         margin-bottom: 0;
-        padding-left: 0;
-        gap: var(--main-grid-gap);
+        gap: var(--grid-gap);
         text-align: center;
 
         .nav-item {
@@ -37,7 +40,6 @@
             .nav-link {
                 width: 100%;
                 padding: 1em 0 1em 0;
-                background-color: var(--section-background-color);
             }
         }
     }

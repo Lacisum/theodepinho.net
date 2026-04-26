@@ -22,6 +22,12 @@ const AsideRight = () => {
         height="31"
       />
       <img
+        src="decoration/responsive-website.gif"
+        alt="Le texte 'Responsive Website' accompagné par une image montrant une ordinateur de bureau et un smartphone."
+        width="88"
+        height="31"
+      />
+      <img
         src="decoration/powered-by-hello-world.gif"
         alt="Le texte 'Powered by Hello world'. Les mots 'Hello world' sont plus gros, utilisent une police plus fantaisiste et sont sur un fond bleu et rouge. 'Hello' est en bleu et 'world' en orange."
         width="88"

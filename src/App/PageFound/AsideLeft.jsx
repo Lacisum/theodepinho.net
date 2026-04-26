@@ -5,7 +5,7 @@ const AsideLeft = () => {
   return (
     <aside id="aside-left">
       <section>
-        <h3>Navigation</h3>
+        <h3>Menu</h3>
         <Navigation />
       </section>
     </aside>

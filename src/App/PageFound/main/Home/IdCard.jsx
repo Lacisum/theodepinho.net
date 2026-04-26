@@ -2,7 +2,7 @@ import "./IdCard.css";
 
 const IdCard = () => {
   return (
-    <section id="id-card">
+    <section id="welcome">
       <img
         src="decoration/welcome.gif"
         alt="Un vieil écran cathodique de PC affichant le texte 'Welcome to my website', entouré de trois chatons curieux et joueurs. L'un, blond, est sur l'écran et le renifle. Un autre, blanc, est assis devant l'écran et lève la tête vers le texte. Le dernier, roux, est à deux pattes et semble essayer d'atteindre quelque chose sur le côté de l'écran avec ses pattes avant."

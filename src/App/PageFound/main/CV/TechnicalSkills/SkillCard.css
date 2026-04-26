@@ -8,7 +8,7 @@
     }
     
     .caption {
-        font-size: var(--font-small);
+        font-size: var(--font-size-small);
         line-height: 1;
     }
 }

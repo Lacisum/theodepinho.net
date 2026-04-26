@@ -1,7 +1,7 @@
 .projects-grid {
     display: grid;
     justify-content: center;
-    gap: var(--section-padding);
+    gap: var(--main-section-padding);
 }
 
 @media (min-width: 501px) {

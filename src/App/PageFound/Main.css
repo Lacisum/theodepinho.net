@@ -1,7 +1,4 @@
 main section {
-    margin: var(--main-grid-border-radius) 0;
-}
-
-main > *:first-child {
-    margin-top: 0 !important;
+    padding: var(--main-section-padding);
+    margin: var(--grid-areas-padding) 0;
 }

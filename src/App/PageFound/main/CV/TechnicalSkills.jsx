@@ -43,7 +43,7 @@ const TechnicalSkills = () => {
           caption="PostgreSQL"
         />
         <SkillCard
-          imgSrc="logos/bash-small.webp"
+          imgSrc="logos/bash-small-white.webp"
           imgAlt="Logo de Bash"
           caption="Bash"
         />

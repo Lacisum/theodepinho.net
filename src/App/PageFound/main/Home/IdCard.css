@@ -1,5 +1,12 @@
-#id-card {
-    grid-area: id-card;
+/* Center the welcome section. */
+main:has(> #welcome) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome {
+    grid-area: welcome;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

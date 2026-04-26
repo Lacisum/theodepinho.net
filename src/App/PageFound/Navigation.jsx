@@ -8,12 +8,12 @@ const Navigation = () => {
       <ul className="nav-list">
         <li className="nav-item">
           <Link className="nav-link" to="/">
-            Accueil
+            🏠 Accueil
           </Link>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/cv">
-            CV
+            📋 CV
           </Link>
         </li>
       </ul>
