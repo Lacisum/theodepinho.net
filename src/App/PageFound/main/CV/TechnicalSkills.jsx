@@ -8,49 +8,49 @@ const TechnicalSkills = () => {
       <div id="technical-skills-grid">
         <SkillCard
           imgSrc="logos/java-small.webp"
-          alt="Logo de Java"
+          imgAlt="Logo de Java"
           caption="Java"
         />
         <SkillCard
           imgSrc="logos/python-small.webp"
-          alt="Logo de Python"
+          imgAlt="Logo de Python"
           caption="Python"
         />
         <SkillCard
           imgSrc="logos/html-small.webp"
-          alt="Logo de HTML"
+          imgAlt="Logo de HTML"
           caption="HTML"
         />
-        <SkillCard imgSrc="logos/css-small.webp" alt="Logo de CSS" caption="CSS" />
+        <SkillCard imgSrc="logos/css-small.webp" imgAlt="Logo de CSS" caption="CSS" />
         <SkillCard
           imgSrc="logos/js-small.webp"
-          alt="Logo de JavaScript"
+          imgAlt="Logo de JavaScript"
           caption="JavaScript"
         />
         <SkillCard
           imgSrc="logos/angular-small.webp"
-          alt="Logo d'Angular"
+          imgAlt="Logo d'Angular"
           caption="Angular"
         />
         <SkillCard
           imgSrc="logos/reactjs-small.webp"
-          alt="Logo de ReactJS"
+          imgAlt="Logo de ReactJS"
           caption="ReactJS"
         />
         <SkillCard
           imgSrc="logos/postgresql-small.webp"
-          alt="Logo de PostgreSQL"
+          imgAlt="Logo de PostgreSQL"
           caption="PostgreSQL"
         />
         <SkillCard
           imgSrc="logos/bash-small.webp"
-          alt="Logo de Bash"
+          imgAlt="Logo de Bash"
           caption="Bash"
         />
-        <SkillCard imgSrc="logos/git-small.webp" alt="Logo de Git" caption="Git" />
+        <SkillCard imgSrc="logos/git-small.webp" imgAlt="Logo de Git" caption="Git" />
         <SkillCard
           imgSrc="logos/docker-small.webp"
-          alt="Logo de Docker"
+          imgAlt="Logo de Docker"
           caption="Docker"
         />
       </div>
