@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./PageFound.css";
 import AsideLeft from "./PageFound/AsideLeft";
@@ -10,7 +10,7 @@ function PageFound() {
   return (
     <div id="content">
       <header>
-        <h1>theodepinho.net</h1>
+        <h1 id="site-title"><Link to="/">theodepinho.net</Link></h1>
       </header>
       <AsideTop />
       <AsideLeft />
