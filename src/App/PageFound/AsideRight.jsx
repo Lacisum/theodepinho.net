@@ -64,7 +64,7 @@ const AsideRight = () => {
         height="31"
       />
       <img
-        src="decoration/i-like-computer.jpg"
+        src="decoration/i-like-computer.gif"
         alt="Une image d'un ordinateur de bureau avec le texte 'I LIKE COMPUTER'."
         width="88"
         height="31"
