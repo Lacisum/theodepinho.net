@@ -19,7 +19,7 @@
 
 body {
     margin: 0;
-    background: url('decoration/stars4.gif');
+    background: url('/decoration/stars4.gif');
 }
 
 #root {
