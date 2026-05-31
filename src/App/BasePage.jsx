@@ -4,7 +4,7 @@ import { useContext } from "react";
 import "./BasePage.css";
 import { ThemeContext, THEME_DARK, THEME_LIGHT } from "../Theme";
 
-const AppPage = () => {
+const BasePage = () => {
     const { theme, setTheme } = useContext(ThemeContext);
     const handleThemeSwitchButtonChange = (event) => {
         setTheme(event.currentTarget.checked ? THEME_DARK : THEME_LIGHT);
@@ -23,4 +23,4 @@ const AppPage = () => {
     );
 }
 
-export default AppPage;
+export default BasePage;
