@@ -1,6 +1,10 @@
+import { useContext } from "react";
+
 import "./CV-list.css";
+import { ThemeContext } from "../../../../../Theme";
 
 const ProfessionalExperiences = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <section>
       <h3>Expériences professionnelles</h3>
@@ -9,7 +13,7 @@ const ProfessionalExperiences = () => {
           <h4 className="title">
             Stage - Développement du site web <code>dezrann.net</code>
           </h4>
-          <div className="details">
+          <div className={`details ${theme}`}>
             Avril 2024 - Juillet 2024, CRIStAL, Algomus
           </div>
         </li>

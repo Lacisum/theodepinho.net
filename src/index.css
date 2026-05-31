@@ -3,6 +3,7 @@
 :root {
     --dark-gray: #bbb;
     --light-gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
+    --white: snow;
     --main-background-color: #111;
     --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
     --grid-gap: 0.25rem;
@@ -19,13 +20,6 @@
 
 body {
     margin: 0;
-    background: url('/decoration/stars4.gif');
-}
-
-#root {
-    padding: clamp(1rem, 2dvw + 1rem, 3rem) 0;
-    min-height: 100dvh;
-    position: relative;
 }
 
 
@@ -33,13 +27,8 @@ body {
 
 /* General styling */
 
-:root {
-    color: white;
-}
-
 * {
     box-sizing: border-box;
-    font-family: 'Courier New', Courier, monospace;
 }
 
 :not(html) {
@@ -61,6 +50,7 @@ h1, h2 {
 h1 {
     letter-spacing: 0.2rem;
     font-size: clamp(1rem, 5dvw + 0.3rem, 2rem);
+    margin-top: 0;
 }
 
 h2 {

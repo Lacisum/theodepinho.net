@@ -1,0 +1,9 @@
+#aside-top {
+    overflow: hidden;
+}
+
+#aside-top.theme-light {
+    border-radius: 1rem;
+    background-color: var(--white);
+    box-shadow: 0.5rem 0.5rem 1rem var(--dark-gray);
+}

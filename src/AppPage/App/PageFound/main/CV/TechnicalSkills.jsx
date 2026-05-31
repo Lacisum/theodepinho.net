@@ -1,7 +1,11 @@
-import SkillCard from "./TechnicalSkills/SkillCard";
+import { useContext } from "react";
+
 import "./TechnicalSkills.css";
+import SkillCard from "./TechnicalSkills/SkillCard";
+import { ThemeContext, THEME_DARK, THEME_LIGHT } from "../../../../../Theme";
 
 const TechnicalSkills = () => {
+  const { theme } = useContext(ThemeContext);
   return (
     <section>
       <h3>Compétences techniques</h3>
@@ -42,11 +46,20 @@ const TechnicalSkills = () => {
           imgAlt="Logo de PostgreSQL"
           caption="PostgreSQL"
         />
-        <SkillCard
-          imgSrc="logos/bash-small-white.webp"
-          imgAlt="Logo de Bash"
-          caption="Bash"
-        />
+        {theme === THEME_DARK &&
+          <SkillCard
+            imgSrc="logos/bash-small-white.webp"
+            imgAlt="Logo de Bash"
+            caption="Bash"
+          />
+        }
+        {theme === THEME_LIGHT &&
+          <SkillCard
+            imgSrc="logos/bash-small-black.webp"
+            imgAlt="Logo de Bash"
+            caption="Bash"
+          />
+        }
         <SkillCard imgSrc="logos/git-small.webp" imgAlt="Logo de Git" caption="Git" />
         <SkillCard
           imgSrc="logos/docker-small.webp"

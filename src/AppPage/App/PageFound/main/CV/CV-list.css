@@ -10,6 +10,13 @@
     
     & > li > .details {
         font-size: var(--font-size-small);
-        color: #ccc;
+
+        &.theme-dark {
+            color: #ccc;
+        }
+
+        &.theme-light {
+            color: #888;
+        }
     }
 }
