@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
-        "module": "CommonJS",
+        "module": "esnext",
         "target": "ES6",
-        "checkJs": true,
-        "jsx": "preserve"
+        "jsx": "react-jsx"
     },
     "exclude": ["node_modules", "dist"]
 }
