@@ -3,7 +3,17 @@ import { useContext } from "react";
 import "./ProjectCard.css";
 import { ThemeContext } from "../../../../../../Theme";
 
-const ProjectCard = ({ imgSrc, imgAlt, projectTitle, projectDescription }) => {
+const ProjectCard = ({
+  imgSrc,
+  imgAlt,
+  projectTitle,
+  projectDescription
+}: {
+  imgSrc: string,
+  imgAlt: string,
+  projectTitle: string,
+  projectDescription: string
+}) => {
   const { theme } = useContext(ThemeContext);
   return (
     <div className={`project-card ${theme}`}>

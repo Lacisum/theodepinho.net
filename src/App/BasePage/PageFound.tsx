@@ -6,7 +6,7 @@ import AsideLeft from "./PageFound/AsideLeft";
 import AsideRight from "./PageFound/AsideRight";
 import Main from "./PageFound/Main";
 import AsideTop from "./PageFound/AsideTop";
-import { ThemeContext, THEME_DARK } from "../../Theme";
+import { ThemeContext, Theme } from "../../Theme";
 
 function PageFound() {
   const { theme } = useContext(ThemeContext);
@@ -16,7 +16,7 @@ function PageFound() {
         <h1 id="site-title"><Link to="/">theodepinho.net</Link></h1>
       </header>
       <AsideTop />
-      { theme === THEME_DARK && (
+      { theme === Theme.DARK && (
           <>
             <AsideLeft />
             <AsideRight />

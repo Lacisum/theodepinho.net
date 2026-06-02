@@ -5,12 +5,12 @@ import PageNotFound from "./App/BasePage/PageNotFound";
 import Home from "./App/BasePage/PageFound/main/Home";
 import CV from "./App/BasePage/PageFound/main/CV";
 import BasePage from "./App/BasePage";
-import { ThemeContext, useTheme } from "./Theme";
+import { ThemeContext, ThemeContextValue, useTheme } from "./Theme";
 
 function App() {
   const [theme, setTheme] = useTheme();
   return (
-    <ThemeContext value={{theme, setTheme}}>
+    <ThemeContext value={{theme, setTheme} as ThemeContextValue}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<BasePage />}>
