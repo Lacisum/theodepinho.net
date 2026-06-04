@@ -25,7 +25,25 @@
             background-color: oklch(from var(--dark-gray) calc(l - 0.05) c h);
         }
     }
+
+    @media (max-width: 1024px) {
+        display: flex;
+        margin-top: 0;
+        margin-bottom: 0;
+        gap: var(--grid-gap);
+        text-align: center;
+
+        .nav-item {
+            flex: 1;
+
+            .nav-link {
+                width: 100%;
+                padding: 1em 0 1em 0;
+            }
+        }
+    }
 }
+
 
 
 
@@ -56,27 +74,6 @@
         .nav-link {
             width: 100%;
             padding: 1em 0 1em 0;
-        }
-    }
-}
-
-
-
-@media (max-width: 1024px) {
-    .nav-list.theme-dark {
-        display: flex;
-        margin-top: 0;
-        margin-bottom: 0;
-        gap: var(--grid-gap);
-        text-align: center;
-
-        .nav-item {
-            flex: 1;
-
-            .nav-link {
-                width: 100%;
-                padding: 1em 0 1em 0;
-            }
         }
     }
 }
