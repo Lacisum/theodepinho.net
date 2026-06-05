@@ -1,8 +1,8 @@
-import Navigation from "./Navigation";
+import Navigation from './Navigation';
 
 const AsideLeft = () => {
   return (
-    <aside id="aside-left">
+    <aside id='aside-left'>
       <section>
         <h3>Menu</h3>
         <Navigation />

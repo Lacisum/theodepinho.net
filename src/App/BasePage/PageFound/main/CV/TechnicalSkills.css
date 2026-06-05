@@ -1,6 +1,6 @@
 #technical-skills-grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, min(100%, calc(4rem + 1dvw)));
-    gap: 1rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, min(100%, calc(4rem + 1dvw)));
+  gap: 1rem;
 }

@@ -1,4 +1,4 @@
 main section {
-    padding: var(--main-section-padding);
-    margin: var(--grid-areas-padding) 0;
+  padding: var(--main-section-padding);
+  margin: var(--grid-areas-padding) 0;
 }

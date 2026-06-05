@@ -1,33 +1,32 @@
 .project-card {
-    overflow: hidden;
-    
-    img {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .caption {
+    padding: 0 1rem;
+
+    .title {
+      margin-top: 1rem;
+      text-align: center;
     }
-    
-    .caption {
-        padding: 0 1rem;
-        
-        .title {
-            margin-top: 1rem;
-            text-align: center;
-        }
-        
-        .description {
-            font-size: var(--font-size-small);
-        }
+
+    .description {
+      font-size: var(--font-size-small);
     }
+  }
 }
 
 .project-card.theme-dark {
-    border: 1px dotted currentColor;
-    
+  border: 1px dotted currentColor;
 }
 
 .project-card.theme-light {
-    border: 1px solid var(--dark-gray);
-    border-radius: 1.3rem;
-    box-shadow: 0.2rem 0.2rem 1rem var(--dark-gray);
+  border: 1px solid var(--dark-gray);
+  border-radius: 1.3rem;
+  box-shadow: 0.2rem 0.2rem 1rem var(--dark-gray);
 }

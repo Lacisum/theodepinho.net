@@ -1,13 +1,12 @@
 @media (min-width: 1025px) {
-    #aside-right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+  #aside-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 
-        & > img {
-            width: var(--buttons-88-31-width);
-        }
+    & > img {
+      width: var(--buttons-88-31-width);
     }
-
+  }
 }

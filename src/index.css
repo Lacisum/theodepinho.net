@@ -1,67 +1,67 @@
 /* Global variables */
 
 :root {
-    --dark-gray: #bbb;
-    --light-gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
-    --white: snow;
-    --main-background-color: #111;
-    --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
-    --grid-gap: 0.25rem;
-    --main-section-padding: 1rem;
-    --font-size-normal: clamp(0.8rem, 3dvw + 0.1rem, 1rem);
-    --font-size-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
-    --buttons-88-31-width: 88px;
+  --dark-gray: #bbb;
+  --light-gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
+  --white: snow;
+  --main-background-color: #111;
+  --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
+  --grid-gap: 0.25rem;
+  --main-section-padding: 1rem;
+  --font-size-normal: clamp(0.8rem, 3dvw + 0.1rem, 1rem);
+  --font-size-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
+  --buttons-88-31-width: 88px;
 }
-
-
-
 
 /* Top-level elements */
 
 body {
-    margin: 0;
+  margin: 0;
 }
-
-
-
 
 /* General styling */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :not(html) {
-    font-size: var(--font-size-normal);
+  font-size: var(--font-size-normal);
 }
 
 code {
-    font-family: 'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
 }
 
-h1, h2 {
-    text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 
 h1 {
-    letter-spacing: 0.2rem;
-    font-size: clamp(1rem, 5dvw + 0.3rem, 2rem);
-    margin-top: 0;
+  letter-spacing: 0.2rem;
+  font-size: clamp(1rem, 5dvw + 0.3rem, 2rem);
+  margin-top: 0;
 }
 
 h2 {
-    font-size: clamp(0.95rem, 4dvw + 0.2rem, 1.5rem);
+  font-size: clamp(0.95rem, 4dvw + 0.2rem, 1.5rem);
 }
 
 h3 {
-    font-size: clamp(0.9rem, 3.5dvw + 0.2rem, 1.17rem);
-    margin-top: 0 !important;
+  font-size: clamp(0.9rem, 3.5dvw + 0.2rem, 1.17rem);
+  margin-top: 0 !important;
 }
 
 ol {
-    padding-left: clamp(20px, 3dvw, 40px);
+  padding-left: clamp(20px, 3dvw, 40px);
 }

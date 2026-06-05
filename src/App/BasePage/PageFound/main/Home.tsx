@@ -1,4 +1,4 @@
-import IdCard from "./Home/IdCard";
+import IdCard from './Home/IdCard';
 
 const Home = () => {
   return (

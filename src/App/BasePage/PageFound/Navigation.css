@@ -1,79 +1,75 @@
 .nav-list {
-    padding-left: 0;
-    list-style: none;
+  padding-left: 0;
+  list-style: none;
 }
 
 .nav-list.theme-dark {
-    margin: 0;
-    color: black;
- 
-    .nav-link {
-        display: inline-block;
-        width: 100%;
-        padding: 0.5rem 0 0.5rem 0;
-        color: currentColor;
-        text-decoration: none;
-        background-color: var(--dark-gray);
-        border: 0.3rem outset var(--light-gray);
+  margin: 0;
+  color: black;
 
-        &:hover {
-            border-style: inset;
-        }
-        
-        &:active {
-            /* Darken the color */
-            background-color: oklch(from var(--dark-gray) calc(l - 0.05) c h);
-        }
+  .nav-link {
+    display: inline-block;
+    width: 100%;
+    padding: 0.5rem 0 0.5rem 0;
+    color: currentColor;
+    text-decoration: none;
+    background-color: var(--dark-gray);
+    border: 0.3rem outset var(--light-gray);
+
+    &:hover {
+      border-style: inset;
     }
 
-    @media (max-width: 1024px) {
-        display: flex;
-        margin-top: 0;
-        margin-bottom: 0;
-        gap: var(--grid-gap);
-        text-align: center;
-
-        .nav-item {
-            flex: 1;
-
-            .nav-link {
-                width: 100%;
-                padding: 1em 0 1em 0;
-            }
-        }
+    &:active {
+      /* Darken the color */
+      background-color: oklch(from var(--dark-gray) calc(l - 0.05) c h);
     }
-}
+  }
 
-
-
-
-
-.nav-list.theme-light {
+  @media (max-width: 1024px) {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 1rem;
-    gap: 2rem;
+    gap: var(--grid-gap);
     text-align: center;
- 
-    .nav-link {
-        flex: 1;
-        color: currentColor;
-        text-decoration: none;
-        transition: 0.3s;
 
-        &:hover {
-            color: var(--dark-gray);
-        }
+    .nav-item {
+      flex: 1;
 
-        &:active {
-            /* Darken the color */
-            color: oklch(from var(--dark-gray) calc(l - 0.1) c h);
-        }
-
-        .nav-link {
-            width: 100%;
-            padding: 1em 0 1em 0;
-        }
+      .nav-link {
+        width: 100%;
+        padding: 1em 0 1em 0;
+      }
     }
+  }
+}
+
+.nav-list.theme-light {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem;
+  gap: 2rem;
+  text-align: center;
+
+  .nav-link {
+    flex: 1;
+    color: currentColor;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--dark-gray);
+    }
+
+    &:active {
+      /* Darken the color */
+      color: oklch(from var(--dark-gray) calc(l - 0.1) c h);
+    }
+
+    .nav-link {
+      width: 100%;
+      padding: 1em 0 1em 0;
+    }
+  }
 }

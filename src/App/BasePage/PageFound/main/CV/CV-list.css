@@ -1,22 +1,22 @@
 .cv-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
 
-    & > li > .title {
-        margin: 0;
+  & > li > .title {
+    margin: 0;
+  }
+
+  & > li > .details {
+    font-size: var(--font-size-small);
+
+    &.theme-dark {
+      color: #ccc;
     }
-    
-    & > li > .details {
-        font-size: var(--font-size-small);
 
-        &.theme-dark {
-            color: #ccc;
-        }
-
-        &.theme-light {
-            color: #888;
-        }
+    &.theme-light {
+      color: #888;
     }
+  }
 }

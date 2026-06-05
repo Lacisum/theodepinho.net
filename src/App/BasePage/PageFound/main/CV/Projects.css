@@ -1,10 +1,10 @@
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    justify-content: center;
-    gap: var(--main-section-padding);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  gap: var(--main-section-padding);
 
-    @media (max-width: 500px) {
-        grid-template-columns: 1fr;
-    }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 }

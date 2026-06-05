@@ -1,15 +1,14 @@
 .skill-card {
-    text-align: center;
+  text-align: center;
 
-    img {
-        max-width: 100%;
-        height: clamp(2rem, 2rem + 1dvw, 2.5rem);
-        margin-bottom: 0.5rem;
-    }
-    
-    .caption {
-        font-size: var(--font-size-small);
-        line-height: 1;
-    }
+  img {
+    max-width: 100%;
+    height: clamp(2rem, 2rem + 1dvw, 2.5rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .caption {
+    font-size: var(--font-size-small);
+    line-height: 1;
+  }
 }
-

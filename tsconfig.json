@@ -1,8 +1,8 @@
 {
-    "compilerOptions": {
-        "module": "esnext",
-        "target": "es2023",
-        "jsx": "react-jsx"
-    },
-    "exclude": ["node_modules", "dist"]
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es2023",
+    "jsx": "react-jsx"
+  },
+  "exclude": ["node_modules", "dist"]
 }

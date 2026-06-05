@@ -1,7 +1,7 @@
-import Education from "./CV/Education";
-import Projects from "./CV/Projects";
-import ProfessionalExperiences from "./CV/ProfessionalExperiences";
-import TechnicalSkills from "./CV/TechnicalSkills";
+import Education from './CV/Education';
+import Projects from './CV/Projects';
+import ProfessionalExperiences from './CV/ProfessionalExperiences';
+import TechnicalSkills from './CV/TechnicalSkills';
 
 const CV = () => {
   return (
