@@ -48,12 +48,13 @@
   display: flex;
   margin-top: 0;
   margin-bottom: 0;
-  padding: 1rem;
-  gap: 2rem;
+  padding: 0 1rem 0 1rem;
   text-align: center;
 
   .nav-link {
+    display: block;
     flex: 1;
+    padding: 1em;
     color: currentColor;
     text-decoration: none;
     transition: 0.3s;
@@ -65,11 +66,6 @@
     &:active {
       /* Darken the color */
       color: oklch(from var(--dark-gray) calc(l - 0.1) c h);
-    }
-
-    .nav-link {
-      width: 100%;
-      padding: 1em 0 1em 0;
     }
   }
 }
