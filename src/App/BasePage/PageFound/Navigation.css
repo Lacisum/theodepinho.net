@@ -57,7 +57,7 @@
     padding: 1em;
     color: currentColor;
     text-decoration: none;
-    transition: 0.3s;
+    transition: color 0.3s;
 
     &:hover {
       color: var(--dark-gray);
