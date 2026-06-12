@@ -23,7 +23,9 @@
     background-color: var(--main-background-color);
     height: 36rem;
     overflow-y: auto;
-    scrollbar-color: snow rgba(0, 0, 0, 0);
+    @supports (scrollbar-color: snow rgba(0, 0, 0, 0)) {
+      scrollbar-color: snow rgba(0, 0, 0, 0);
+    }
   }
 }
 

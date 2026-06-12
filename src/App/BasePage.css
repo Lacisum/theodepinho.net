@@ -45,7 +45,12 @@
 #theme-switch-button {
   font-size: clamp(1rem, 5dvw + 0.3rem, 1.5rem);
   cursor: pointer;
-  user-select: none;
+  @supports (user-select: none) {
+    user-select: none;
+  }
+  @supports not (user-select: none) {
+    -webkit-user-select: none;
+  }
 
   & > input {
     display: none;

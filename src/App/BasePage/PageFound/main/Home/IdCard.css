@@ -1,8 +1,9 @@
-/* Center the welcome section. */
-main:has(> #welcome) {
+#welcome-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  margin: 0;
 }
 
 #welcome {
@@ -10,6 +11,7 @@ main:has(> #welcome) {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   row-gap: 0;
   column-gap: 3rem;
 
@@ -24,6 +26,8 @@ main:has(> #welcome) {
     align-items: center;
     max-width: 20rem;
     text-align: center;
-    text-wrap: balance;
+    @supports (text-wrap: balance) {
+      text-wrap: balance;
+    }
   }
 }

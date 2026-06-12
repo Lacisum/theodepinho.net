@@ -69,9 +69,7 @@ export default defineConfig([
       'css/use-baseline': [
         'error',
         {
-          // TODO: remove and instead use baseline CSS
-          allowSelectors: ['nesting', 'has'],
-          allowProperties: ['user-select', 'scrollbar-color', 'text-wrap'],
+          allowSelectors: ['nesting'],
         },
       ],
       'css/no-invalid-properties': ['error', { allowUnknownVariables: true }],
