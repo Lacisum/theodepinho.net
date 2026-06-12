@@ -31,7 +31,7 @@ const TechnicalSkills = () => {
           caption='CSS'
         />
         <SkillCard
-          imgSrc='logos/js-small.webp'
+          imgSrc='logos/javascript-small.webp'
           imgAlt='Logo de JavaScript'
           caption='JavaScript'
         />
