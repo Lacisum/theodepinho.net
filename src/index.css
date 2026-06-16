@@ -11,6 +11,7 @@
   --font-size-normal: clamp(0.8rem, 3dvw + 0.1rem, 1rem);
   --font-size-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
   --buttons-88-31-width: 88px;
+  --project-card-theme-light-border-radius: 1.3rem;
 }
 
 /* Top-level elements */

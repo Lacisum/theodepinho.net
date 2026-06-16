@@ -1,18 +1,17 @@
+import TechnologyLogo from '../../../../../../base-components/TechnologyLogo';
+import {
+  Technology,
+  TECHNOLOGY_LOGOS_PROPERTIES,
+} from '../../../../../../types/Technology';
 import './SkillCard.css';
 
-const SkillCard = ({
-  imgSrc,
-  imgAlt,
-  caption,
-}: {
-  imgSrc: string;
-  imgAlt: string;
-  caption: string;
-}) => {
+const SkillCard = ({ technology }: { technology: Technology }) => {
   return (
     <div className='skill-card'>
-      <img src={imgSrc} alt={imgAlt} height='40' />
-      <div className='caption'>{caption}</div>
+      <TechnologyLogo technology={technology} />
+      <div className='caption'>
+        {TECHNOLOGY_LOGOS_PROPERTIES[technology].name}
+      </div>
     </div>
   );
 };
