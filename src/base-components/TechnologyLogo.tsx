@@ -1,4 +1,4 @@
-import { Technology, TECHNOLOGY_LOGOS_PROPERTIES } from '../types/Technology';
+import { Technology, TECHNOLOGY_LOGOS_PROPERTIES } from '@/types/Technology';
 
 const TechnologyLogo = ({
   technology,

@@ -1,8 +1,9 @@
-import { Outlet } from 'react-router-dom';
 import { ChangeEvent, useContext } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import { ThemeContext, Theme } from '@/Theme';
 
 import './BasePage.css';
-import { ThemeContext, Theme } from '../Theme';
 
 const BasePage = () => {
   const { theme, setTheme } = useContext(ThemeContext);

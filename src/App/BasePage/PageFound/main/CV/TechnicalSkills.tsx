@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 
+import { ThemeContext, Theme } from '@/Theme';
+import { Technology } from '@/types/Technology';
+
 import './TechnicalSkills.css';
 import SkillCard from './TechnicalSkills/SkillCard';
-import { ThemeContext, Theme } from '../../../../../Theme';
-import { Technology } from '../../../../../types/Technology';
 
 const TechnicalSkills = () => {
   const { theme } = useContext(ThemeContext);

@@ -1,7 +1,8 @@
 import { useContext } from 'react';
 
+import { ThemeContext } from '@/Theme';
+
 import './CV-list.css';
-import { ThemeContext } from '../../../../../Theme';
 
 const Education = () => {
   const { theme } = useContext(ThemeContext);

@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import { ThemeContext, Theme } from '@/Theme';
 
 import './PageFound.css';
 import AsideLeft from './PageFound/AsideLeft';
 import AsideRight from './PageFound/AsideRight';
 import Main from './PageFound/Main';
 import AsideTop from './PageFound/AsideTop';
-import { ThemeContext, Theme } from '../../Theme';
 
 function PageFound() {
   const { theme } = useContext(ThemeContext);

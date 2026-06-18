@@ -1,8 +1,9 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import { ThemeContext } from '@/Theme';
 
 import './Navigation.css';
-import { Link } from 'react-router-dom';
-import { ThemeContext } from '../../../Theme';
 
 const Navigation = () => {
   const { theme } = useContext(ThemeContext);

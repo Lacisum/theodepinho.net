@@ -1,8 +1,6 @@
-import TechnologyLogo from '../../../../../../base-components/TechnologyLogo';
-import {
-  Technology,
-  TECHNOLOGY_LOGOS_PROPERTIES,
-} from '../../../../../../types/Technology';
+import TechnologyLogo from '@/base-components/TechnologyLogo';
+import { Technology, TECHNOLOGY_LOGOS_PROPERTIES } from '@/types/Technology';
+
 import './SkillCard.css';
 
 const SkillCard = ({ technology }: { technology: Technology }) => {

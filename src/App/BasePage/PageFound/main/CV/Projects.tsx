@@ -1,6 +1,7 @@
+import { Technology } from '@/types/Technology';
+
 import './Projects.css';
 import ProjectCard from './Projects/ProjectCard';
-import { Technology } from '../../../../../types/Technology';
 
 const Projects = () => {
   return (

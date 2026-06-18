@@ -1,9 +1,10 @@
 import { useContext } from 'react';
 
+import { ThemeContext } from '@/Theme';
+import { Technology } from '@/types/Technology';
+import TechnologyLogo from '@/base-components/TechnologyLogo';
+
 import './ProjectCard.css';
-import { ThemeContext } from '../../../../../../Theme';
-import { Technology } from '../../../../../../types/Technology';
-import TechnologyLogo from '../../../../../../base-components/TechnologyLogo';
 
 const ProjectCard = ({
   imgSrc,

@@ -1,8 +1,9 @@
 import { useContext } from 'react';
 
+import { ThemeContext } from '@/Theme';
+
 import './AsideTop.css';
 import Navigation from './Navigation';
-import { ThemeContext } from '../../../Theme';
 
 const AsideTop = () => {
   const { theme } = useContext(ThemeContext);

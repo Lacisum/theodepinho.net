@@ -1,8 +1,9 @@
 import { useContext } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import { ThemeContext } from '@/Theme';
 
 import './Main.css';
-import { Outlet } from 'react-router-dom';
-import { ThemeContext } from '../../../Theme';
 
 const Main = () => {
   const { theme } = useContext(ThemeContext);
