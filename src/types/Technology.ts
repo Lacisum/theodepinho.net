@@ -3,6 +3,7 @@ export enum Technology {
   PYTHON = 'python',
   HTML = 'html',
   CSS = 'css',
+  TAILWIND = 'tailwind',
   JAVASCRIPT = 'javascript',
   TYPESCRIPT = 'typescript',
   ANGULAR = 'angular',
@@ -30,6 +31,10 @@ export const TECHNOLOGY_LOGOS_PROPERTIES = {
   [Technology.CSS]: {
     imgSrc: 'logos/css-small.webp',
     name: 'CSS',
+  },
+  [Technology.TAILWIND]: {
+    imgSrc: 'logos/tailwind-small.webp',
+    name: 'Tailwind',
   },
   [Technology.JAVASCRIPT]: {
     imgSrc: 'logos/javascript-small.webp',

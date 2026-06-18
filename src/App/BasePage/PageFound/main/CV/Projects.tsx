@@ -19,6 +19,7 @@ const Projects = () => {
             Technology.POSTGRESQL,
             Technology.TYPESCRIPT,
             Technology.ANGULAR,
+            Technology.TAILWIND,
             Technology.DOCKER,
           ]}
         />
