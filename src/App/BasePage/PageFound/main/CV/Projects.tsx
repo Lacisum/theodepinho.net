@@ -37,6 +37,17 @@ const Projects = () => {
           projectDescription='Générateur de listes de courses alimentaires'
           technologies={[Technology.JAVA, Technology.PYTHON]}
         />
+        <ProjectCard
+          imgSrc='projects/snake-typescript.webp'
+          imgAlt="Capture d'écran de Snake dans un navigateur web"
+          projectTitle='Snake'
+          projectDescription='Le jeu "Snake" dans un look rétro'
+          technologies={[
+            Technology.HTML,
+            Technology.CSS,
+            Technology.TYPESCRIPT,
+          ]}
+        />
       </div>
     </section>
   );
