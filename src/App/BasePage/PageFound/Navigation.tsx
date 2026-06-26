@@ -11,13 +11,18 @@ const Navigation = () => {
     <nav>
       <ul className={`nav-list ${theme}`}>
         <li className='nav-item'>
-          <Link className='nav-link' to='/'>
+          <Link className={`nav-link ${theme}`} to='/'>
             🏠 Accueil
           </Link>
         </li>
         <li className='nav-item'>
-          <Link className='nav-link' to='/cv'>
+          <Link className={`nav-link ${theme}`} to='/cv'>
             📋 CV
+          </Link>
+        </li>
+        <li className='nav-item'>
+          <Link className={`nav-link ${theme}`} to='/projects/snake-95'>
+            🐍 Snake 95
           </Link>
         </li>
       </ul>

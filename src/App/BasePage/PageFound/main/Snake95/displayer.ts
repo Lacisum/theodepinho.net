@@ -1,0 +1,141 @@
+import { type Cell, CellStatus } from './common';
+
+/**
+ * An object that handles the display.
+ */
+export class Displayer {
+  readonly #score: HTMLElement;
+  readonly #gridContainer: HTMLElement;
+  /** A bidimensional array containg all HTML elements cells */
+  readonly #grid: ReadonlyArray<ReadonlyArray<HTMLElement>>;
+
+  /**
+   * Initializes the DOM grid
+   */
+  constructor(gridNbRows: number, gridNbColumns: number) {
+    const grid = [];
+    for (let rowNb = 0; rowNb < gridNbRows; rowNb++) {
+      const row: HTMLElement[] = [];
+      for (let columnNb = 0; columnNb < gridNbColumns; columnNb++) {
+        row.push(Displayer.#createCell());
+      }
+      grid.push(row);
+    }
+    this.#grid = grid;
+
+    this.#gridContainer = document.querySelector<HTMLElement>(
+      '.snake-95__grid-container',
+    )!;
+    this.#gridContainer.style.gridTemplateRows = `repeat(${gridNbRows}, 1fr)`;
+    this.#gridContainer.style.gridTemplateColumns = `repeat(${gridNbColumns}, 1fr)`;
+    for (const row of this.#grid) {
+      for (const cell of row) {
+        this.#gridContainer.appendChild(cell);
+      }
+    }
+
+    this.#score = document.querySelector<HTMLElement>('.snake-95__score')!;
+  }
+
+  /**
+   * Displays a "Play" button that, when clicked, will start the game.
+   *
+   * @param startNewGame a function that starts a new game
+   */
+  askPlay(startNewGame: () => void): void {
+    const popUp = document.createElement('div');
+    popUp.classList = 'snake-95__popup';
+
+    const playButton = document.createElement('button');
+    playButton.classList = 'snake-95__play-button';
+    playButton.innerText = 'Play';
+    const closePopUp = () => this.#gridContainer.removeChild(popUp);
+    playButton.addEventListener('click', () => {
+      closePopUp();
+      startNewGame();
+    });
+    popUp.append(playButton);
+
+    this.#gridContainer.appendChild(popUp);
+  }
+
+  /**
+   * Displays a "Game over" text and a "Retry" button that, when clicked, will
+   * restart the game.
+   *
+   * @param startNewGame a function that starts a new game
+   */
+  askRetry(startNewGame: () => void): void {
+    const popUp = document.createElement('div');
+    popUp.classList = 'snake-95__popup';
+
+    const gameOverBlock = document.createElement('div');
+    gameOverBlock.classList = 'snake-95__game-over';
+    gameOverBlock.innerText = 'Game Over';
+    popUp.appendChild(gameOverBlock);
+
+    const retryButton = document.createElement('button');
+    retryButton.classList = 'snake-95__play-button';
+    retryButton.innerText = 'Retry';
+    const closePopUp = () => this.#gridContainer.removeChild(popUp);
+    retryButton.addEventListener('click', () => {
+      closePopUp();
+      startNewGame();
+    });
+    popUp.append(retryButton);
+
+    this.#gridContainer.appendChild(popUp);
+  }
+
+  /**
+   * Does a draw call.
+   *
+   * @param cells the grid's cells statuses
+   * @param gameIsOver whether the game is lost
+   * @param score the current score
+   */
+  draw(
+    cells: ReadonlyArray<ReadonlyArray<Cell>>,
+    gameIsOver: boolean,
+    score: number,
+  ): void {
+    for (let i = 0; i < cells.length; i++) {
+      for (let j = 0; j < cells[0].length; j++) {
+        const cell = cells[i][j];
+        const htmlCell = this.#grid[i][j];
+        htmlCell.innerHTML = ``;
+        htmlCell.classList = 'snake-95__cell';
+        switch (cell.status) {
+          case CellStatus.SNAKE_PART: {
+            const snakePart = document.createElement('div');
+            snakePart.classList = `snake-95__snake-part ${gameIsOver ? 'snake-95__dead' : ''}`;
+            Object.values(cell.snakePlacement.directions).forEach(
+              (direction) => {
+                const segment = document.createElement('div');
+                segment.classList = `snake-95__${direction}`;
+                snakePart.appendChild(segment);
+              },
+            );
+            htmlCell.appendChild(snakePart);
+            break;
+          }
+          case CellStatus.FOOD:
+            htmlCell.innerHTML = '<div class="snake-95__food"></div>';
+            break;
+        }
+      }
+    }
+    this.#score.innerHTML = String(score);
+  }
+
+  /**
+   * Creates an HTML element cell.
+   *
+   * @returns an HTML element cell
+   */
+  static #createCell(): HTMLElement {
+    const cell = document.createElement('div');
+    cell.classList.add('snake-95__cell');
+    return cell;
+  }
+}

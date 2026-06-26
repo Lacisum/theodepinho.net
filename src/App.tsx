@@ -7,6 +7,7 @@ import PageNotFound from './App/BasePage/PageNotFound';
 import Home from './App/BasePage/PageFound/main/Home';
 import CV from './App/BasePage/PageFound/main/CV';
 import BasePage from './App/BasePage';
+import Snake95 from './App/BasePage/PageFound/main/Snake95';
 
 function App() {
   const [theme, setTheme] = useTheme();
@@ -15,11 +16,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<BasePage />}>
-            <Route path='/' element={<PageFound />}>
+            <Route path='' element={<PageFound />}>
               <Route index element={<Home />} />
-              <Route path='/cv' element={<CV />} />
+              <Route path='cv' element={<CV />} />
             </Route>
             <Route path='*' element={<PageNotFound />} />
+          </Route>
+          <Route path='/projects'>
+            <Route path='snake-95' element={<Snake95 />} />
           </Route>
         </Routes>
       </BrowserRouter>

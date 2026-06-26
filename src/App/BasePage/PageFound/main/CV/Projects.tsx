@@ -1,9 +1,15 @@
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+
 import { Technology } from '@/types/Technology';
+import { ThemeContext } from '@/Theme';
 
 import './Projects.css';
 import ProjectCard from './Projects/ProjectCard';
 
 const Projects = () => {
+  const { theme } = useContext(ThemeContext);
+
   return (
     <section>
       <h3>Exemples de projets réalisés</h3>
@@ -37,17 +43,19 @@ const Projects = () => {
           projectDescription='Générateur de listes de courses alimentaires'
           technologies={[Technology.JAVA, Technology.PYTHON]}
         />
-        <ProjectCard
-          imgSrc='projects/snake-typescript.webp'
-          imgAlt="Capture d'écran de Snake dans un navigateur web"
-          projectTitle='Snake'
-          projectDescription='Le jeu "Snake" dans un look rétro'
-          technologies={[
-            Technology.HTML,
-            Technology.CSS,
-            Technology.TYPESCRIPT,
-          ]}
-        />
+        <Link to='/projects/snake-95' className={`project-card-link ${theme}`}>
+          <ProjectCard
+            imgSrc='projects/snake-95.webp'
+            imgAlt="Capture d'écran de Snake 95 dans un navigateur web"
+            projectTitle='Snake 95'
+            projectDescription='Le jeu "Snake" dans le style de Windows 95'
+            technologies={[
+              Technology.HTML,
+              Technology.CSS,
+              Technology.TYPESCRIPT,
+            ]}
+          />
+        </Link>
       </div>
     </section>
   );
