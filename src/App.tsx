@@ -17,13 +17,45 @@ function App() {
         <Routes>
           <Route path='/' element={<BasePage />}>
             <Route path='' element={<PageFound />}>
-              <Route index element={<Home />} />
-              <Route path='cv' element={<CV />} />
+              <Route
+                index
+                element={
+                  <>
+                    <title>Théo de Pinho</title>
+                    <Home />
+                  </>
+                }
+              />
+              <Route
+                path='cv'
+                element={
+                  <>
+                    <title>CV - Théo de Pinho</title>
+                    <CV />
+                  </>
+                }
+              />
             </Route>
-            <Route path='*' element={<PageNotFound />} />
+            <Route
+              path='*'
+              element={
+                <>
+                  <title>Page non trouvée - Théo de Pinho</title>
+                  <PageNotFound />
+                </>
+              }
+            />
           </Route>
           <Route path='/projects'>
-            <Route path='snake-95' element={<Snake95 />} />
+            <Route
+              path='snake-95'
+              element={
+                <>
+                  <title>Snake 95 - Théo de Pinho</title>
+                  <Snake95 />
+                </>
+              }
+            />
           </Route>
         </Routes>
       </BrowserRouter>
