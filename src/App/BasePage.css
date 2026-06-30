@@ -9,12 +9,12 @@
 
 #base-page.theme-dark {
   color: white;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--theme-dark-font);
 }
 
 #base-page.theme-light {
   color: black;
-  font-family: Avantgarde, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
+  font-family: var(--theme-light-font);
 }
 
 #base-page::before {

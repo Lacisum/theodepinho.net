@@ -1,3 +1,30 @@
+@font-face {
+  font-family: Barlow;
+  src: url('/fonts/Barlow-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url('/fonts/Barlow-Italic.ttf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url('/fonts/Barlow-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Barlow;
+  src: url('/fonts/Barlow-BoldItalic.ttf');
+  font-weight: bold;
+  font-style: italic;
+}
+
 /* Global variables */
 
 :root {
@@ -12,6 +39,8 @@
   --font-size-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
   --buttons-88-31-width: 88px;
   --project-card-theme-light-border-radius: 1.3rem;
+  --theme-dark-font: 'Courier New', Courier, monospace;
+  --theme-light-font: Barlow, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
 }
 
 /* Top-level elements */

@@ -34,6 +34,7 @@
     text-decoration: none;
     background-color: var(--dark-gray);
     border: 0.3rem outset var(--light-gray);
+    font-family: var(--theme-dark-font);
 
     &:hover {
       border-style: inset;
@@ -62,6 +63,7 @@
     color: currentColor;
     text-decoration: none;
     transition: color 0.3s;
+    font-family: var(--theme-light-font);
 
     &:hover {
       color: var(--dark-gray);
