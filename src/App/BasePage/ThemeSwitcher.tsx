@@ -14,20 +14,16 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <div id='theme-switch-container'>
-      <label
-        id='theme-switch-button'
-        className={theme}
-        title='Changer le thème'
-      >
-        <input
-          type='checkbox'
-          defaultChecked={theme === Theme.DARK}
-          onChange={handleThemeSwitchButtonChange}
-        />
-        {theme === Theme.LIGHT ? '🌘' : '☀️'}
-      </label>
-    </div>
+    <label id='theme-switch-button' className={theme} title='Changer le thème'>
+      <input
+        type='checkbox'
+        defaultChecked={theme === Theme.DARK}
+        onChange={handleThemeSwitchButtonChange}
+      />
+      <i
+        className={`fa-regular ${theme === Theme.LIGHT ? 'fa-sun' : 'fa-moon'}`}
+      />
+    </label>
   );
 };
 
