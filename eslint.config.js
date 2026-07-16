@@ -70,6 +70,12 @@ export default defineConfig([
         'error',
         {
           allowSelectors: ['nesting'],
+          allowProperties: [
+            'anchor-name',
+            'position-anchor',
+            'backdrop-filter',
+          ],
+          allowFunctions: ['anchor'],
         },
       ],
       'css/no-invalid-properties': ['error', { allowUnknownVariables: true }],

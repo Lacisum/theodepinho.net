@@ -1,13 +1,11 @@
 #base-page {
   display: flex;
   flex-direction: column;
-  padding: clamp(1rem, 2dvw + 0.2rem, 3rem) 0;
   min-height: 100dvh;
-  margin: auto;
-  width: min(90%, 85rem);
 }
 
 #base-page.theme-dark {
+  padding: 4rem 0 clamp(1rem, 2dvw + 0.2rem, 3rem) 0;
   color: white;
   font-family: var(--theme-dark-font);
 }
@@ -30,33 +28,5 @@
 }
 
 #base-page.theme-light::before {
-  background: #eee;
-}
-
-#theme-switch-container {
-  align-self: flex-end;
-  transition: 0.3s;
-
-  &:hover {
-    transform: scale(1.5);
-  }
-}
-
-#theme-switch-button {
-  font-size: clamp(1rem, 5dvw + 0.3rem, 1.5rem);
-  cursor: pointer;
-  @supports (user-select: none) {
-    user-select: none;
-  }
-  @supports not (user-select: none) {
-    -webkit-user-select: none;
-  }
-
-  & > input {
-    display: none;
-  }
-}
-
-#theme-switch-button.theme-light {
-  text-shadow: 0.2rem 0.2rem 0.5rem var(--dark-gray);
+  background: #fff;
 }

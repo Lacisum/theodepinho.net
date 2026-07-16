@@ -1,0 +1,23 @@
+#theme-switch-container {
+  transition: 0.3s;
+
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+#theme-switch-button {
+  align-content: flex-start;
+  font-size: clamp(1.2rem, 1.7dvw + 1rem, 1.6rem);
+  cursor: pointer;
+  @supports (user-select: none) {
+    user-select: none;
+  }
+  @supports not (user-select: none) {
+    -webkit-user-select: none;
+  }
+
+  & > input {
+    display: none;
+  }
+}

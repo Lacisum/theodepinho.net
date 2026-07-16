@@ -1,33 +1,18 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
 
-import { ThemeContext, Theme } from '@/Theme';
+import { Theme, ThemeContext } from '@/Theme';
 
-import './PageFound.css';
-import AsideLeft from './PageFound/AsideLeft';
-import AsideRight from './PageFound/AsideRight';
-import Main from './PageFound/Main';
-import AsideTop from './PageFound/AsideTop';
+import PageFound_ThemeDark from './PageFound_ThemeDark';
+import PageFound_ThemeLight from './PageFound_ThemeLight';
 
-function PageFound() {
+const PageFound = () => {
   const { theme } = useContext(ThemeContext);
-  return (
-    <div id='content' className={theme}>
-      <header>
-        <h1 id='site-title'>
-          <Link to='/'>theodepinho.net</Link>
-        </h1>
-      </header>
-      <AsideTop />
-      {theme === Theme.DARK && (
-        <>
-          <AsideLeft />
-          <AsideRight />
-        </>
-      )}
-      <Main />
-    </div>
+
+  return theme === Theme.LIGHT ? (
+    <PageFound_ThemeLight />
+  ) : (
+    <PageFound_ThemeDark />
   );
-}
+};
 
 export default PageFound;

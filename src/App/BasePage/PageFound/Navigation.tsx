@@ -1,30 +1,49 @@
 import { useContext } from 'react';
+
 import { Link } from 'react-router-dom';
 
 import { ThemeContext } from '@/Theme';
 
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = ({
+  className,
+  onLinkClick,
+}: {
+  className: string;
+  onLinkClick?: () => void;
+}) => {
   const { theme } = useContext(ThemeContext);
+
+  const links = [
+    {
+      to: '/',
+      content: '🏠 Accueil',
+    },
+    {
+      to: '/cv',
+      content: '📋 CV',
+    },
+    {
+      to: '/projects/snake-95',
+      content: '🐍 Snake 95',
+    },
+  ];
+
   return (
-    <nav>
+    <nav className={`navigation ${theme} ${className}`}>
       <ul className={`nav-list ${theme}`}>
-        <li className='nav-item'>
-          <Link className={`nav-link ${theme}`} to='/'>
-            🏠 Accueil
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link className={`nav-link ${theme}`} to='/cv'>
-            📋 CV
-          </Link>
-        </li>
-        <li className='nav-item'>
-          <Link className={`nav-link ${theme}`} to='/projects/snake-95'>
-            🐍 Snake 95
-          </Link>
-        </li>
+        {links.map((link) => (
+          <li key={link.to} className='nav-item'>
+            <Link
+              className={`nav-link ${theme}`}
+              to={link.to}
+              onClick={onLinkClick}
+            >
+              {link.content}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
