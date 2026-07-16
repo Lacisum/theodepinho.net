@@ -1,4 +1,4 @@
-@media (min-width: 1025px) {
+@media screen and (min-width: 1025px) {
   #aside-right {
     display: flex;
     flex-direction: column;

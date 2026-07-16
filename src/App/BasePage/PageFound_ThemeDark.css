@@ -57,7 +57,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   #content.theme-dark {
     grid-template-columns: initial;
     grid-template-areas:

@@ -4,7 +4,7 @@
   justify-content: center;
   gap: var(--main-section-padding);
 
-  @media (max-width: 500px) {
+  @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;
   }
 }
