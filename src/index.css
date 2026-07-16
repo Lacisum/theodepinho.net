@@ -45,9 +45,11 @@
   --theme-light-font: Barlow, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
   @media (prefers-reduced-motion: no-preference) {
     --sidebar-animation-duration: 0.5s;
+    --project-card-animation-duration: 0.2s;
   }
   @media (prefers-reduced-motion: reduce) {
     --sidebar-animation-duration: 0;
+    --project-card-animation-duration: 0;
   }
 }
 
