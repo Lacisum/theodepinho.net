@@ -79,11 +79,8 @@
 
 .navigation.theme-light.sidebar-nav {
   .nav-list {
-    height: auto;
     display: flex;
     flex-direction: column;
-    gap: 0;
-    padding: 0;
     text-align: left;
 
     .nav-link {
