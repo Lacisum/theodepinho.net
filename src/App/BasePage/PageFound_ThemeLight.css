@@ -13,9 +13,7 @@
     position: sticky;
     top: 0;
     min-height: 4rem;
-    --padding-horizontal: clamp(0.5rem, calc(2dvw + 0.5rem), 2rem);
-    padding-left: var(--padding-horizontal);
-    padding-right: var(--padding-horizontal);
+    padding: 0 clamp(0.5rem, calc(2dvw + 0.5rem), 2rem);
     background-color: var(--whitesmoke);
     border-bottom: 1px solid var(--dark-gray);
 
@@ -128,12 +126,7 @@
   right: anchor(left);
   height: calc(100dvh - anchor-size(height));
   width: clamp(15rem, 30dvw, 20rem);
-  --padding-vertical: 1rem;
-  --pading-horizontal: 1.5rem;
-  padding-top: var(--padding-vertical);
-  padding-right: var(--pading-horizontal);
-  padding-left: var(--pading-horizontal);
-  padding-bottom: var(--padding-vertical);
+  padding: 1rem 1.5rem;
   background-color: var(--white);
 
   transition:
