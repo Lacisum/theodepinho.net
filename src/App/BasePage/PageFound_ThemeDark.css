@@ -28,7 +28,7 @@
   main {
     grid-area: main;
     padding: var(--grid-areas-padding);
-    border: 1rem ridge var(--light-gray);
+    border: 1rem ridge var(--gray);
     background-color: var(--main-background-color);
     height: 36rem;
     overflow-y: auto;

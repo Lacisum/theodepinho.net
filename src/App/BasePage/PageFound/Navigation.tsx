@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { ThemeContext } from '@/Theme';
 
@@ -14,6 +14,7 @@ const Navigation = ({
   onLinkClick?: () => void;
 }) => {
   const { theme } = useContext(ThemeContext);
+  const activePath = useLocation().pathname;
 
   const links = [
     {
@@ -36,7 +37,7 @@ const Navigation = ({
         {links.map((link) => (
           <li key={link.to} className='nav-item'>
             <Link
-              className={`nav-link ${theme}`}
+              className={`nav-link ${theme} ${activePath !== undefined && link.to === activePath ? 'active' : ''}`}
               to={link.to}
               onClick={onLinkClick}
             >

@@ -33,7 +33,7 @@
     color: currentColor;
     text-decoration: none;
     background-color: var(--dark-gray);
-    border: 0.3rem outset var(--light-gray);
+    border: 0.3rem outset var(--gray);
     font-family: var(--theme-dark-font);
 
     &:hover {
@@ -47,7 +47,7 @@
   }
 }
 
-.navigation.theme-light {
+.navigation.theme-light.header-nav {
   .nav-list {
     height: 100%;
     margin-top: 0;
@@ -87,23 +87,24 @@
 
     .nav-link {
       display: block;
-      --padding-vertical: 1rem;
-      padding-top: var(--padding-vertical);
-      padding-bottom: var(--padding-vertical);
+      padding: 1rem;
       flex: 1;
       color: currentColor;
       text-decoration: none;
-      transition: color 0.3s;
       font-family: var(--theme-light-font);
       font-size: var(--font-size-large);
+      --hover-background-color: var(--whitesmoke);
+
+      transition: background-color 0.3s;
 
       &:hover {
-        color: var(--dark-gray);
+        background-color: var(--hover-background-color);
       }
 
-      &:active {
-        /* Darken the color */
-        color: oklch(from var(--dark-gray) calc(l - 0.1) c h);
+      &.active {
+        background-color: oklch(
+          from var(--hover-background-color) calc(l - 0.05) c h
+        );
       }
     }
   }

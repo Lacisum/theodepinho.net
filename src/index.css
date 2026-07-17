@@ -29,9 +29,10 @@
 
 :root {
   --dark-gray: #bbb;
-  --light-gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
-  --white: white;
+  --gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
+  --light-gray: #ddd;
   --whitesmoke: whitesmoke;
+  --white: white;
   --main-background-color: #111;
   --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
   --grid-gap: 0.25rem;
