@@ -126,7 +126,7 @@
   right: anchor(left);
   height: calc(100dvh - anchor-size(height));
   width: clamp(15rem, 30dvw, 20rem);
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   background-color: var(--white);
 
   transition:
