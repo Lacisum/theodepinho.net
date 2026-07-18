@@ -93,8 +93,6 @@
       font-size: var(--font-size-large);
       --hover-background-color: var(--whitesmoke);
 
-      transition: background-color 0.3s;
-
       &:hover {
         background-color: var(--hover-background-color);
       }
