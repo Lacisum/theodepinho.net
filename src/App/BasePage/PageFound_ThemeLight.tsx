@@ -19,6 +19,7 @@ function PageFound_ThemeLight() {
   const sidebarRef = useRef<HTMLDivElement>(null);
   const sidebarButtonRef = useRef<HTMLButtonElement>(null);
 
+  // Close the sidebar if big screen size is reached
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > MOBILE_MAX_WIDTH) {

@@ -29,7 +29,7 @@
     grid-area: main;
     padding: var(--grid-areas-padding);
     border: 1rem ridge var(--gray);
-    background-color: var(--main-background-color);
+    background-color: var(--theme-dark-main-background-color);
     height: 36rem;
     overflow-y: auto;
     @supports (scrollbar-color: snow rgba(0, 0, 0, 0)) {

@@ -28,12 +28,15 @@
 /* Global variables */
 
 :root {
+  --black: black;
   --dark-gray: #bbb;
   --gray: oklch(from var(--dark-gray) calc(l + 0.1) c h);
   --light-gray: #ddd;
   --whitesmoke: whitesmoke;
   --white: white;
-  --main-background-color: #111;
+  --theme-dark-main-background-color: #111;
+  --theme-light-header-background-color: var(--whitesmoke);
+  --theme-light-sidebar-background-color: var(--white);
   --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
   --grid-gap: 0.25rem;
   --main-section-padding: 1rem;

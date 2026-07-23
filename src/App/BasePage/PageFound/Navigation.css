@@ -62,16 +62,28 @@
       align-content: center;
       color: currentColor;
       text-decoration: none;
-      transition: color 0.3s;
       font-family: var(--theme-light-font);
 
       &:hover {
-        color: var(--dark-gray);
+        background-color: oklch(
+          from var(--theme-light-header-background-color) calc(l - 0.03) c h
+        );
       }
+    }
+  }
 
-      &:active {
-        /* Darken the color */
-        color: oklch(from var(--dark-gray) calc(l - 0.1) c h);
+  .header-nav-underline {
+    position: absolute;
+    bottom: 0.25rem;
+    background-color: var(--black);
+    height: 0.2em;
+    pointer-events: none;
+
+    &.with-transition {
+      @media (prefers-reduced-motion: no-preference) {
+        transition-property: left, width;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
       }
     }
   }
@@ -91,15 +103,16 @@
       text-decoration: none;
       font-family: var(--theme-light-font);
       font-size: var(--font-size-large);
-      --hover-background-color: var(--whitesmoke);
 
       &:hover {
-        background-color: var(--hover-background-color);
+        background-color: oklch(
+          from var(--theme-light-sidebar-background-color) calc(l - 0.03) c h
+        );
       }
 
       &.active {
         background-color: oklch(
-          from var(--hover-background-color) calc(l - 0.05) c h
+          from var(--theme-light-sidebar-background-color) calc(l - 0.06) c h
         );
       }
     }

@@ -14,7 +14,7 @@
     top: 0;
     min-height: 4rem;
     padding: 0 clamp(0.5rem, calc(2dvw + 0.5rem), 2rem);
-    background-color: var(--whitesmoke);
+    background-color: var(--theme-light-header-background-color);
     border-bottom: 1px solid var(--dark-gray);
 
     display: grid;
@@ -127,7 +127,7 @@
   height: calc(100dvh - anchor-size(height));
   width: clamp(15rem, 30dvw, 20rem);
   padding: 1.5rem;
-  background-color: var(--white);
+  background-color: var(--theme-light-sidebar-background-color);
 
   transition:
     translate var(--sidebar-animation-duration) ease,
