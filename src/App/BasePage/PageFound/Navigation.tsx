@@ -7,10 +7,10 @@ import { ThemeContext } from '@/Theme';
 import './Navigation.css';
 
 const Navigation = ({
-  className,
+  className = '',
   onLinkClick,
 }: {
-  className: string;
+  className?: string;
   onLinkClick?: () => void;
 }) => {
   const { theme } = useContext(ThemeContext);
