@@ -9,9 +9,11 @@ import './Navigation.css';
 const Navigation = ({
   className = '',
   onLinkClick,
+  withAnimatedUnderline = false,
 }: {
   className?: string;
   onLinkClick?: () => void;
+  withAnimatedUnderline: boolean;
 }) => {
   const { theme } = useContext(ThemeContext);
   const activePath = useLocation().pathname;
@@ -115,11 +117,13 @@ const Navigation = ({
             </Link>
           </li>
         ))}
-        <div
-          ref={underlineRef}
-          className='header-nav-underline'
-          aria-hidden
-        ></div>
+        {withAnimatedUnderline && (
+          <div
+            ref={underlineRef}
+            className='header-nav-underline'
+            aria-hidden
+          ></div>
+        )}
       </ul>
     </nav>
   );

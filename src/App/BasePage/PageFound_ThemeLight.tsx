@@ -67,7 +67,7 @@ function PageFound_ThemeLight() {
         <h1 id='site-title'>
           <Link to='/'>theodepinho.net</Link>
         </h1>
-        <Navigation className='header-nav' />
+        <Navigation className='header-nav' withAnimatedUnderline={true} />
         <div className='header-right-cell'>
           <ThemeSwitcher />
         </div>
