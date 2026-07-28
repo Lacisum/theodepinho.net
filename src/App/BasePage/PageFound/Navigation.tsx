@@ -19,7 +19,7 @@ const Navigation = ({
   const activePath = useLocation().pathname;
   const linksContainerRef = useRef<HTMLUListElement>(null);
   const underlineRef = useRef<HTMLDivElement>(null);
-
+  const isInitialMountRef = useRef(true);
   const linksRefs = useRef<{
     [path: string]: HTMLElement;
   }>({});
@@ -47,7 +47,8 @@ const Navigation = ({
     (withTransition: boolean) => {
       const activeLink = linksRefs.current[activePath];
       const underline = underlineRef.current;
-      if (!activeLink || !underline) return;
+      const linksContainer = linksContainerRef.current;
+      if (!activeLink || !underline || !linksContainer) return;
 
       if (withTransition) underline.classList.add('with-transition');
       else underline.classList.remove('with-transition');
@@ -80,8 +81,32 @@ const Navigation = ({
     )
       return;
 
-    alignUnderlineAndActiveLinkWithTransition();
-  }, [activePath, links, alignUnderlineAndActiveLinkWithTransition]);
+    if (isInitialMountRef.current) {
+      alignUnderlineAndActiveLinkWithoutTransition();
+      isInitialMountRef.current = false;
+    } else {
+      alignUnderlineAndActiveLinkWithTransition();
+    }
+  }, [
+    activePath,
+    links,
+    alignUnderlineAndActiveLinkWithoutTransition,
+    alignUnderlineAndActiveLinkWithTransition,
+  ]);
+
+  // Adjust underline's width on font load
+  useEffect(() => {
+    let cancelled = false;
+    if ('fonts' in document) {
+      document.fonts.ready.then(() => {
+        if (!cancelled) alignUnderlineAndActiveLinkWithoutTransition();
+      });
+    }
+
+    return () => {
+      cancelled = true;
+    };
+  }, [alignUnderlineAndActiveLinkWithoutTransition]);
 
   // Align underline with active link on window resize event
   useEffect(() => {
