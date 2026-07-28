@@ -20,6 +20,7 @@ const Navigation = ({
   const linksContainerRef = useRef<HTMLUListElement>(null);
   const underlineRef = useRef<HTMLDivElement>(null);
   const isInitialMountRef = useRef(true);
+  // test
   const linksRefs = useRef<{
     [path: string]: HTMLElement;
   }>({});
