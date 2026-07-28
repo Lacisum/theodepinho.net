@@ -50,6 +50,7 @@
 
 .navigation.theme-light.header-nav {
   .nav-list {
+    position: relative;
     height: 100%;
     margin-top: 0;
     margin-bottom: 0;

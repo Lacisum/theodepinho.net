@@ -108,20 +108,6 @@ const Navigation = ({
     };
   }, [alignUnderlineAndActiveLinkWithoutTransition]);
 
-  // Align underline with active link on window resize event
-  useEffect(() => {
-    window.addEventListener(
-      'resize',
-      alignUnderlineAndActiveLinkWithoutTransition,
-    );
-    return () => {
-      window.removeEventListener(
-        'resize',
-        alignUnderlineAndActiveLinkWithoutTransition,
-      );
-    };
-  }, [alignUnderlineAndActiveLinkWithoutTransition]);
-
   return (
     <nav className={`navigation ${theme} ${className}`}>
       <ul ref={linksContainerRef} className={`nav-list ${theme}`}>
