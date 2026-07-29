@@ -13,6 +13,9 @@ function PageFound_ThemeLight() {
   const { theme } = useContext(ThemeContext);
 
   const [sidebarActive, setSidebarActive] = useState(false);
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= MOBILE_MAX_WIDTH,
+  );
 
   const headerRef = useRef<HTMLElement>(null);
   const mainRef = useRef<HTMLElement>(null);
@@ -22,7 +25,8 @@ function PageFound_ThemeLight() {
   // Close the sidebar if big screen size is reached
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > MOBILE_MAX_WIDTH) {
+      setIsMobile(window.innerWidth <= MOBILE_MAX_WIDTH);
+      if (!isMobile) {
         setSidebarActive(false);
       }
     };
@@ -30,7 +34,7 @@ function PageFound_ThemeLight() {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [isMobile]);
 
   // Close the sidebar if user clicks outside of it
   useEffect(() => {
@@ -67,7 +71,9 @@ function PageFound_ThemeLight() {
         <h1 id='site-title'>
           <Link to='/'>theodepinho.net</Link>
         </h1>
-        <Navigation className='header-nav' withAnimatedUnderline={true} />
+        {!isMobile && (
+          <Navigation className='header-nav' withAnimatedUnderline={true} />
+        )}
         <div className='header-right-cell'>
           <ThemeSwitcher />
         </div>
