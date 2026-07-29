@@ -72,7 +72,7 @@ function PageFound_ThemeLight() {
           <Link to='/'>theodepinho.net</Link>
         </h1>
         {!isMobile && (
-          <Navigation className='header-nav' withAnimatedUnderline={true} />
+          <Navigation className='header-nav' withUnderline={true} />
         )}
         <div className='header-right-cell'>
           <ThemeSwitcher />
