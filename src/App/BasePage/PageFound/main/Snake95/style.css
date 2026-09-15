@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: w95f;
-  src: url('/projects/snake-95/w95f.woff2');
+  src: url('/fonts/w95f.woff2');
 }
 
 @keyframes snake-95__dead-snake-expansion {

@@ -25,6 +25,11 @@
   font-style: italic;
 }
 
+@font-face {
+  font-family: w95f;
+  src: url('/fonts/w95f.woff2');
+}
+
 /* Global variables */
 
 :root {
@@ -45,7 +50,7 @@
   --font-size-small: clamp(0.6rem, 2.8dvw + 0.1rem, 0.8rem);
   --buttons-88-31-width: 88px;
   --project-card-theme-light-border-radius: 1.3rem;
-  --theme-dark-font: 'Courier New', Courier, monospace;
+  --theme-dark-font: w95f, 'Courier New', Courier, monospace;
   --theme-light-font: Barlow, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
   @media (prefers-reduced-motion: no-preference) {
     --sidebar-animation-duration: 0.5s;
