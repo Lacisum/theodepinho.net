@@ -20,7 +20,7 @@ const ProfessionalExperiences = () => {
         </li>
         <li className='job'>
           <h4 className='title'>
-            Stage - Développement du site web <code>dezrann.net</code>
+            Stage - Développement du site web <em>dezrann.net</em>
           </h4>
           <div className={`details ${theme}`}>
             Avril 2024 - Juillet 2024, CRIStAL, Algomus
