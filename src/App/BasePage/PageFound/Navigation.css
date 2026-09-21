@@ -70,21 +70,11 @@
           from var(--theme-light-header-background-color) calc(l - 0.03) c h
         );
       }
-    }
-  }
 
-  .header-nav-underline {
-    position: absolute;
-    bottom: 0.25rem;
-    background-color: var(--black);
-    height: 0.2em;
-    pointer-events: none;
-
-    &.with-transition {
-      @media (prefers-reduced-motion: no-preference) {
-        transition-property: left, width;
-        transition-duration: 0.5s;
-        transition-timing-function: ease;
+      &:active {
+        background-color: oklch(
+          from var(--theme-light-header-background-color) calc(l - 0.06) c h
+        );
       }
     }
   }
@@ -111,7 +101,7 @@
         );
       }
 
-      &.active {
+      &:active {
         background-color: oklch(
           from var(--theme-light-sidebar-background-color) calc(l - 0.06) c h
         );

@@ -6,13 +6,18 @@
     'header'
     'main';
 
+  * {
+    /* Account for the sticky header when scrolling an element into view */
+    scroll-margin-top: var(--theme-light-header-height);
+  }
+
   header {
     z-index: 3;
     grid-area: header;
     anchor-name: --header;
     position: sticky;
     top: 0;
-    min-height: 4rem;
+    height: var(--theme-light-header-height);
     padding: 0 clamp(0.5rem, calc(2dvw + 0.5rem), 2rem);
     background-color: var(--theme-light-header-background-color);
     border-bottom: 1px solid var(--dark-gray);
@@ -55,12 +60,23 @@
 
   main {
     grid-area: main;
-    padding: var(--grid-areas-padding);
     background-color: var(--white);
 
-    section {
-      padding: var(--main-section-padding);
-      margin: var(--grid-areas-padding) 0;
+    & > section {
+      padding: var(--main-section-padding-vertical)
+        var(--main-section-padding-horizontal);
+
+      /* The actual content of the section */
+      & > * {
+        margin: 0 auto;
+        max-width: 60rem;
+
+        /* Subsections */
+        section {
+          padding: var(--main-section-padding-vertical) 0;
+          margin: var(--grid-areas-padding) 0;
+        }
+      }
     }
   }
 }

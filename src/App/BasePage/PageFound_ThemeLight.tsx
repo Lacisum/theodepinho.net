@@ -71,9 +71,7 @@ function PageFound_ThemeLight() {
         <h1 id='site-title'>
           <Link to='/'>theodepinho.net</Link>
         </h1>
-        {!isMobile && (
-          <Navigation className='header-nav' withUnderline={true} />
-        )}
+        {!isMobile && <Navigation className='header-nav' />}
         <div className='header-right-cell'>
           <ThemeSwitcher />
         </div>

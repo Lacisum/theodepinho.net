@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   justify-content: center;
-  gap: var(--main-section-padding);
+  gap: var(--main-section-padding-vertical);
 
   @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;

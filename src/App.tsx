@@ -5,7 +5,6 @@ import { ThemeContext, ThemeContextValue, useTheme } from '@/Theme';
 import PageFound from './App/BasePage/PageFound';
 import PageNotFound from './App/BasePage/PageNotFound';
 import Home from './App/BasePage/PageFound/main/Home';
-import CV from './App/BasePage/PageFound/main/CV';
 import BasePage from './App/BasePage';
 import Snake95 from './App/BasePage/PageFound/main/Snake95';
 
@@ -23,15 +22,6 @@ function App() {
                   <>
                     <title>Théo de Pinho</title>
                     <Home />
-                  </>
-                }
-              />
-              <Route
-                path='cv'
-                element={
-                  <>
-                    <title>CV - Théo de Pinho</title>
-                    <CV />
                   </>
                 }
               />

@@ -26,8 +26,9 @@
   }
 
   main {
+    container-type: size;
+
     grid-area: main;
-    padding: var(--grid-areas-padding);
     border: 1rem ridge var(--gray);
     background-color: var(--theme-dark-main-background-color);
     height: 36rem;
@@ -36,9 +37,14 @@
       scrollbar-color: snow rgba(0, 0, 0, 0);
     }
 
-    section {
-      padding: var(--main-section-padding);
-      margin: var(--grid-areas-padding) 0;
+    & > section {
+      padding: var(--main-section-padding-vertical)
+        var(--main-section-padding-horizontal);
+
+      section {
+        padding: var(--main-section-padding-vertical) 0;
+        margin: var(--grid-areas-padding) 0;
+      }
     }
   }
 

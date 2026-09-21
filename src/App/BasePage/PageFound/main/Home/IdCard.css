@@ -1,19 +1,24 @@
-#welcome-container {
+#welcome {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
   margin: 0;
+
+  &.theme-dark {
+    min-height: 100cqh;
+  }
+
+  &.theme-light {
+    min-height: calc(100dvh - var(--theme-light-header-height));
+  }
 }
 
-#welcome {
+#welcome-content {
   grid-area: welcome;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 0;
-  column-gap: 3rem;
 
   & > img {
     width: min(193px, 100%);
