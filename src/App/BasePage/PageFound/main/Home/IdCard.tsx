@@ -23,6 +23,7 @@ const IdCard = () => {
             ingénieur logiciel.
           </p>
         </div>
+        <i className='fa-solid fa-angles-down' aria-hidden />
       </section>
       {theme === Theme.LIGHT && <div className='zigzag' aria-hidden />}
     </>
