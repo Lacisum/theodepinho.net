@@ -9,7 +9,10 @@
   }
 
   &.theme-light {
-    min-height: calc(100dvh - var(--theme-light-header-height));
+    min-height: 100dvh;
+    padding-top: calc(
+      var(--main-section-padding-vertical) + var(--theme-light-header-height)
+    ) !important;
     background-image: url('/decoration/noise.png');
     background-color: var(--home-first-section-background-color);
   }

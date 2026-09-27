@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef, useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
-import { ThemeContext } from '@/Theme';
+import { Theme, ThemeContext } from '@/Theme';
 
 import './PageFound_ThemeLight.css';
 import Navigation from './PageFound/Navigation';
@@ -21,6 +21,22 @@ function PageFound_ThemeLight() {
   const mainRef = useRef<HTMLElement>(null);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const sidebarButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Change the appearance of the header when scrollTop is greater than 0
+  useEffect(() => {
+    if (theme === Theme.DARK) return;
+    function changeColorOfHeader(e: Event) {
+      const target = e.target as Document;
+      const scrollTop = target.scrollingElement?.scrollTop;
+      if (scrollTop === 0) {
+        headerRef.current!.classList.remove('not-at-the-top');
+      } else {
+        headerRef.current!.classList.add('not-at-the-top');
+      }
+    }
+    document.addEventListener('scroll', changeColorOfHeader);
+    return () => document.removeEventListener('scroll', changeColorOfHeader);
+  }, [theme]);
 
   // Close the sidebar if big screen size is reached
   useEffect(() => {
