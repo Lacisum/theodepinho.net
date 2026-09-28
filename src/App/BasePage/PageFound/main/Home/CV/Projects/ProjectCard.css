@@ -3,7 +3,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
 
-  img {
+  & > img {
     width: 100%;
     height: auto;
     aspect-ratio: 16 / 9;
@@ -25,6 +25,7 @@
       .title {
         margin: 0;
         text-align: center;
+        font-weight: bold;
       }
 
       .description {
@@ -64,6 +65,10 @@
     flex: 1;
     border: 1px dotted currentColor;
 
+    & > img {
+      border-bottom: 1px dotted var(--dark-gray);
+    }
+
     .text-section {
       padding-bottom: 1rem;
     }
@@ -76,6 +81,10 @@
     border: 1px solid var(--dark-gray);
     border-radius: var(--project-card-theme-light-border-radius);
     box-shadow: 0.2rem 0.2rem 1rem var(--dark-gray);
+
+    & > img {
+      border-bottom: 1px solid var(--dark-gray);
+    }
 
     .text-section {
       padding-bottom: var(--project-card-theme-light-border-radius);
