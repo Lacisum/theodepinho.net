@@ -12,15 +12,14 @@ const MOBILE_MAX_WIDTH = 1024;
 function PageFound_ThemeLight() {
   const { theme } = useContext(ThemeContext);
 
-  const [sidebarActive, setSidebarActive] = useState(false);
+  const [mobileMenuActive, setMobileMenuActive] = useState(false);
   const [isMobile, setIsMobile] = useState(
     window.innerWidth <= MOBILE_MAX_WIDTH,
   );
 
   const headerRef = useRef<HTMLElement>(null);
   const mainRef = useRef<HTMLElement>(null);
-  const sidebarRef = useRef<HTMLDivElement>(null);
-  const sidebarButtonRef = useRef<HTMLButtonElement>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Change the appearance of the header when scrollTop is greater than 0
   useEffect(() => {
@@ -38,12 +37,12 @@ function PageFound_ThemeLight() {
     return () => document.removeEventListener('scroll', changeColorOfHeader);
   }, [theme]);
 
-  // Close the sidebar if big screen size is reached
+  // Close the mobile menu if big screen size is reached
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= MOBILE_MAX_WIDTH);
       if (!isMobile) {
-        setSidebarActive(false);
+        setMobileMenuActive(false);
       }
     };
     window.addEventListener('resize', handleResize);
@@ -52,37 +51,18 @@ function PageFound_ThemeLight() {
     };
   }, [isMobile]);
 
-  // Close the sidebar if user clicks outside of it
-  useEffect(() => {
-    const sidebar = sidebarRef.current;
-    const sidebarButton = sidebarButtonRef.current;
-    const handleClick = (e: MouseEvent) => {
-      if (
-        sidebarActive &&
-        !sidebar!.contains(e.target as Node) &&
-        !sidebarButton!.contains(e.target as Node)
-      )
-        setSidebarActive(false);
-    };
-    document.addEventListener('click', handleClick);
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, [sidebarActive]);
-
-  const handleSidebarButtonClick = () => {
-    setSidebarActive((prevValue) => !prevValue);
+  const handleMobileMenuButtonClick = () => {
+    setMobileMenuActive((prevValue) => !prevValue);
   };
 
   return (
     <div id='content' className={theme}>
       <header ref={headerRef}>
         <button
-          ref={sidebarButtonRef}
-          className='sidebar-button'
-          onClick={handleSidebarButtonClick}
+          className='mobile-menu-button'
+          onClick={handleMobileMenuButtonClick}
         >
-          <i className={`fa-solid ${sidebarActive ? 'fa-xmark' : 'fa-bars'}`} />
+          <i className='fa-solid fa-bars' />
         </button>
         <h1 id='site-title'>
           <Link to='/'>theodepinho.net</Link>
@@ -92,17 +72,22 @@ function PageFound_ThemeLight() {
           <ThemeSwitcher />
         </div>
       </header>
-      <div
-        className={`sidebar-overlay ${sidebarActive ? 'active' : 'inactive'}`}
-      ></div>
       <aside
-        ref={sidebarRef}
-        className={`sidebar ${sidebarActive ? 'active' : 'inactive'}`}
+        ref={mobileMenuRef}
+        className={`mobile-menu ${mobileMenuActive ? 'active' : 'inactive'}`}
       >
-        <Navigation
-          className={`sidebar-nav ${sidebarActive ? 'active' : 'inactive'}`}
-          onLinkClick={() => setSidebarActive(false)}
-        />
+        <button
+          className='mobile-menu-button'
+          onClick={handleMobileMenuButtonClick}
+        >
+          <i className='fa-solid fa-xmark' />
+        </button>
+        <div className='nav-container'>
+          <Navigation
+            className={`mobile-menu-nav ${mobileMenuActive ? 'active' : 'inactive'}`}
+            onLinkClick={() => setMobileMenuActive(false)}
+          />
+        </div>
       </aside>
       <main ref={mainRef}>
         <Outlet />

@@ -54,14 +54,14 @@
   --theme-dark-main-background-color: #111;
   --theme-light-header-background-color: var(--whitesmoke);
   --theme-light-header-height: 4.5rem;
-  --theme-light-sidebar-background-color: var(--white);
+  --theme-light-mobile-menu-background-color: var(--white);
   --home-first-section-background-color: #00a3c4;
   --scroll-invitation-animation-offset: 2rem;
   --grid-areas-padding: clamp(0.8rem, 2dvw, 1.5rem);
   --grid-gap: 0.25rem;
   --main-section-padding-vertical: 1rem;
   --main-section-padding-horizontal: clamp(0.2rem, 10dvw + 0.2rem, 15rem);
-  --font-size-large: clamp(1rem, 0.6dvw + 0.7rem, 1.2rem);
+  --font-size-large: clamp(1.2rem, 1dvw + 1.1rem, 1.5rem);
   --font-size-normal: clamp(0.8rem, 2dvw + 0.1rem, 1.2rem);
   --font-size-small: clamp(0.8rem, 1.5dvw + 0.1rem, 1rem);
   --buttons-88-31-width: 88px;
@@ -70,11 +70,11 @@
   --theme-light-font: Timeless, Palatino, Georgia, 'URW Palladio L', serif;
   --font-sans-serif: Barlow, 'TeX Gyre Adventor', 'URW Gothic L', sans-serif;
   @media (prefers-reduced-motion: no-preference) {
-    --sidebar-animation-duration: 0.5s;
+    --mobile-menu-animation-duration: 0.5s;
     --project-card-animation-duration: 0.2s;
   }
   @media (prefers-reduced-motion: reduce) {
-    --sidebar-animation-duration: 0;
+    --mobile-menu-animation-duration: 0;
     --project-card-animation-duration: 0;
   }
 }

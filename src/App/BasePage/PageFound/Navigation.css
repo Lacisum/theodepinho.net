@@ -79,7 +79,7 @@
   }
 }
 
-.navigation.theme-light.sidebar-nav {
+.navigation.theme-light.mobile-menu-nav {
   .nav-list {
     display: flex;
     flex-direction: column;
