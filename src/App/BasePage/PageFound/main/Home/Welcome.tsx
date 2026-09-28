@@ -1,8 +1,9 @@
 import { useContext } from 'react';
-import './IdCard.css';
 import { Theme, ThemeContext } from '@/Theme';
 
-const IdCard = () => {
+import './Welcome.css';
+
+const Welcome = () => {
   const { theme } = useContext(ThemeContext);
   return (
     <>
@@ -30,4 +31,4 @@ const IdCard = () => {
   );
 };
 
-export default IdCard;
+export default Welcome;

@@ -1,10 +1,10 @@
 import CV from './Home/CV';
-import IdCard from './Home/IdCard';
+import Welcome from './Home/Welcome';
 
 const Home = () => {
   return (
     <>
-      <IdCard />
+      <Welcome />
       <CV />
     </>
   );
