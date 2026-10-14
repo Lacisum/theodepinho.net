@@ -14,9 +14,7 @@ const Education = () => {
           <h4 className='title'>
             Master d'informatique (parcours génie logiciel)
           </h4>
-          <div className={`details ${theme}`}>
-            2026 (en cours d'obtention), Université de Lille
-          </div>
+          <div className={`details ${theme}`}>2026, Université de Lille</div>
         </li>
         <li>
           <h4 className='title'>Licence d'informatique</h4>
