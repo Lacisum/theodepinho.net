@@ -12,16 +12,14 @@ const ProfessionalExperiences = () => {
       <ol id='jobs-list' className='cv-list'>
         <li className='job'>
           <h4 className='title'>
-            Stage - Développement de la plateforme web et mobile de Solfy
+            Stage de développement front-end web & mobile
           </h4>
           <div className={`details ${theme}`}>
             Mai 2026 - Septembre 2026, Solfy
           </div>
         </li>
         <li className='job'>
-          <h4 className='title'>
-            Stage - Développement du site web <em>dezrann.net</em>
-          </h4>
+          <h4 className='title'>Stage de développement back-end</h4>
           <div className={`details ${theme}`}>
             Avril 2024 - Juillet 2024, CRIStAL, Algomus
           </div>
