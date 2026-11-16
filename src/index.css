@@ -135,6 +135,7 @@ h3 {
   margin-top: 0 !important;
 }
 
-ol {
+ol,
+ul {
   padding-left: clamp(20px, 3dvw, 40px);
 }
