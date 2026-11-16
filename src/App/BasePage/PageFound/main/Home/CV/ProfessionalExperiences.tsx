@@ -24,6 +24,14 @@ const ProfessionalExperiences = () => {
             Avril 2024 - Juillet 2024, CRIStAL, Algomus
           </div>
         </li>
+        <li className='job'>
+          <h4 className='title'>Agent municipal saisonnier - Capitainerie</h4>
+          <div className={`details ${theme}`}>Août 2021, Mairie de Cambrai</div>
+        </li>
+        <li className='job'>
+          <h4 className='title'>Agent municipal saisonnier - Espaces verts</h4>
+          <div className={`details ${theme}`}>Août 2020, Mairie de Cambrai</div>
+        </li>
       </ol>
     </section>
   );
